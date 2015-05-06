@@ -632,7 +632,7 @@ label {
   line-height: 1.4em;
 }
 .form-group.form-group-icon-left .form-control {
-  padding-left: 32px;
+  padding-left: 32px !important;
 }
 .form-group.form-group-icon-right .form-control {
   padding-right: 32px;
@@ -759,9 +759,9 @@ label {
   color: #1b94d2;
 }
 .form-control {
-  -webkit-border-radius: 0;
+  -webkit-border-radius: 0 !important;
   border-radius: 0;
-  -webkit-box-shadow: none;
+  -webkit-box-shadow: none !important;
   box-shadow: none;
   line-height: 1.6em;
 }
