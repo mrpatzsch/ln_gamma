@@ -607,7 +607,8 @@
                     <div class="row row-wrap" data-gutter="60">
                         <div class="col-md-4">
                             <div class="thumb">
-                                <header class="thumb-header"><i class="fa fa-dollar box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                                <header class="thumb-header">
+                                <i class="fa fa-dollar box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
                                 </header>
                                 <div class="thumb-caption">
                                     <h5 class="thumb-title"><a class="text-darken" href="#">Lowest Prices</a></h5>
@@ -617,7 +618,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="thumb">
-                                <header class="thumb-header"><i class="fa fa-lock box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
+                                <header class="thumb-header"><i class="fa fa-heart-o box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
                                 </header>
                                 <div class="thumb-caption">
                                     <h5 class="thumb-title"><a class="text-darken" href="www.lotusnomasd.org/about">We Give Back</a></h5>
@@ -642,7 +643,8 @@
         </div>
         <div class="bg-holder">
             <div class="bg-mask"></div>
-            <div class="bg-blur" style="background-image:url(beach);"></div>
+            <!-- <div class="hero-unit" style="background-image: url(<%= asset_path 'fks.JPG' %>) ;> -->
+            <div class="bg-blur" style="background-image: url(<%= 'beach.jpg' %>)";></div>
             <div class="bg-content">
                 <div class="container">
                     <div class="gap gap-big text-center text-white">
@@ -675,7 +677,7 @@
                         <div class="thumb">
                             <header class="thumb-header">
                                 <a class="hover-img curved" href="#">
-                                    <%= image_tag("beach_hammock", alt: "Akha Ama Coffee", height: '160', width: '320') %>
+                                    <%= image_tag("beach_hammock", alt: "Akha Ama Coffee", height: '160', width: '600') %>
                                     <i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
                                 </a>
                             </header>
