@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'less-rails-fontawesome'
-gem 'font'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
