@@ -1,147 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-
-<head>
-    <title>LOTUS Nomads</title>
+<%= render 'head' %>
+<%= render 'nav' %>
 
 
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="keywords" content="Responsible, Travel, Anti-human trafficking, Ecotourism, globetrot graciously, give back" />
-    <meta name="description" content="LOTUS Nomads - the lowest prices &amp; widest selection in responsible travel">
-    <meta name="author" content="LOTUS Nomads">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
-    <!-- /GOOGLE FONTS -->
-	<%= stylesheet_link_tag "application" %>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  
-
-
-
-</head>
-
-<body>
-
-    <!-- FACEBOOK WIDGET -->
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!-- /FACEBOOK WIDGET -->
-    <div class="global-wrap">
-        <header id="main-header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <a class="logo" href="index.html">
-                                <%= image_tag("LOTUS_Nomads_logo", height: '50', width: '110') %>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-md-offset-2">
-                            <form class="main-header-search">
-                                <div class="form-group form-group-icon-left">
-                                    <i class="fa fa-search input-icon"></i>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="top-user-area clearfix">
-                                <ul class="top-user-area-list list list-horizontal list-border">
-                                  <!--   <li class="top-user-area-avatar">
-                                        <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a> -->
-                                    </li>
-                                    <li><a href="about.html">Globetrot Graciously | Uniquely Responsible Travel</a>
-                                    </li>
-                               <!--      <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
-                                        <ul class="list nav-drop-menu">
-                                            <li><a href="#">EUR<span class="right">€</span></a>
-                                            </li>
-                                            <li><a href="#">GBP<span class="right">£</span></a>
-                                            </li>
-                                            <li><a href="#">JPY<span class="right">円</span></a>
-                                            </li>
-                                            <li><a href="#">CAD<span class="right">$</span></a>
-                                            </li>
-                                            <li><a href="#">AUD<span class="right">A$</span></a>
-                                            </li>
-                                        </ul>
-                                    </li> -->
-                                    <li class="top-user-area-lang nav-drop">
-                                       <!--  <a href="#">
-                                            <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
-                                        </a> -->
-                                        <!-- <ul class="list nav-drop-menu">
-                                            <li>
-                                                <a title="German" href="#">
-                                                    <img src="img/flags/32/de.png" alt="Image Alternative text" title="Image Title" /><span class="right">GER</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Japanise" href="#">
-                                                    <img src="img/flags/32/jp.png" alt="Image Alternative text" title="Image Title" /><span class="right">JAP</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Italian" href="#">
-                                                    <img src="img/flags/32/it.png" alt="Image Alternative text" title="Image Title" /><span class="right">ITA</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="French" href="#">
-                                                    <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" /><span class="right">FRE</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Russian" href="#">
-                                                    <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">RUS</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Korean" href="#">
-                                                    <img src="img/flags/32/kr.png" alt="Image Alternative text" title="Image Title" /><span class="right">KOR</span>
-                                                </a>
-                                            </li>
-                                        </ul> -->
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="nav">
-                    <ul class="slimmenu" id="slimmenu">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="coming-soon.html">Hotels</a>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
 
         <!-- TOP AREA -->
         <div class="top-area show-onload">
             <div class="bg-holder full">
                 <div class="bg-mask"></div>
-                <div class="bg-img" style="background-image:url(img/2048x1365.png);"></div>
                 <video class="bg-video hidden-sm hidden-xs" preload="auto" autoplay="true" loop="loop" muted="muted"  poster="img/video-bg.jpg"
                 <%= video_tag("loop.mp4") %> 
                 <%= video_tag("loop.webm") %> 
@@ -150,20 +15,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-5 col-md-offset-7">
-                                <!-- START TESTIMONIAL -->
-                              <!--   <div class="testimonial text-white mt50 hidden-sm hidden-xs">
-                                    <div class="testimonial-inner">
-                                        <blockquote>
-                                            <p>Hendrerit pellentesque ligula mus mollis himenaeos class lorem nam sociis congue quis imperdiet ornare elementum</p>
-                                        </blockquote>
-                                    </div>
-                                </div> -->
-                                    <!-- <div class="testimonial-author">
-                                        <img src="img/50x50.png" alt="Image Alternative text" title="Gamer Chick" />
-                                        <p class="testimonial-author-name">Elizabeth Wallace</p><cite>on <a class="text-udl" href="#">The Benjamin</a> hotel in New York</cite>
-                                    </div>
-                                </div>
-                                END TESTIMONIAL -->
                             </div>
                         </div>
                     </div>
@@ -643,27 +494,13 @@
         </div>
         <div class="bg-holder">
             <div class="bg-mask"></div>
-            <!-- <div class="hero-unit" style="background-image: url(<%= asset_path 'fks.JPG' %>) ;> -->
-            <div class="bg-blur" style="background-image: url(<%= 'beach.jpg' %>)";></div>
+           
             <div class="bg-content">
                 <div class="container">
                     <div class="gap gap-big text-center text-white">
                         <h2 class="text-uc mb20"></h2>
-                    <!--     <ul class="icon-list list-inline-block mb0 last-minute-rating">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                        </ul> -->
-                        <!-- <h5 class="last-minute-title">Big</h5> -->
                         <p class="last-minute-date">The companies listed on Nomads uphold industry recognized social and environmental standards so that you can travel with the peace of mind that your dollars are doing the most good.</p>
-                        <p class="mb20"><i>Come globetrot graciously with us...<i></p><a class="btn btn-lg btn-white btn-ghost" href="www.lotusnomads.org/hotels">Book Now<i class="fa fa-angle-right"></i></a>
+                        <p class="mb20"><i>Come globetrot graciously with us...<i></p><a class="btn btn-lg btn-white btn-ghost" href="hotels.html">Book Now<i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -677,7 +514,7 @@
                         <div class="thumb">
                             <header class="thumb-header">
                                 <a class="hover-img curved" href="#">
-                                    <%= image_tag("beach_hammock", alt: "Akha Ama Coffee", height: '160', width: '600') %>
+                                    <%= image_tag("beach_hammock", alt: "Akha Ama Coffee") %>
                                     <i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
                                 </a>
                             </header>
@@ -733,79 +570,6 @@
             </div>
         </div>
 
+<%= render 'footer' %>
 
-
-        <footer id="main-footer">
-            <div class="container">
-                <div class="row row-wrap">
-                    <div class="col-md-3">
-                        <a class="logo" href="index.html">
-                            <%= image_tag("LOTUS_Nomads_logo", height: '50', width: '110') %></a>
-                        <p class="mb20">Resort and hotel bookings, restaurants, reviews and trip advice for the socially responsible traveller!</p>
-                        <ul class="list list-horizontal list-space">
-                            <li>
-                                <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="https://www.facebook.com/LOTUSalliance"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-twitter box-icon-normal round animate-icon-bottom-to-top" href="https://twitter.com/LOTUSNomads"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-google-plus box-icon-normal round animate-icon-bottom-to-top" href="https://plus.google.com/+LotusnomadsOrg"></a>
-                            </li>
-                            <li>
-                                <a class="fa fa-instagram box-icon-normal round animate-icon-bottom-to-top" href="https://instagram.com/lotusnomads/"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3">
-                        <h4>Newsletter</h4>
-                        <form>
-                            <label>Enter your E-mail Address</label>
-                            <input type="text" class="form-control">
-                            <p class="mt5"><small>*We Never Send Spam</small>
-                            </p>
-                            <input type="submit" class="btn btn-primary" value="Subscribe">
-                        </form>
-                    </div>
-           <div class="col-md-2">
-                        <ul class="list list-footer">
-                            <li><a href="www.lotusnomads.org/about">About Us</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/hotels">Book</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/destinations">Destinations</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/blog">Blog</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/FAQ">FAQ</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/contact">Contact</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/privacy">Privacy Policy</a>
-                            </li>
-                            <li><a href="www.lotusnomads.org/terms">Terms of Use</a>
-                            </li>
-                            <li><a href="www.lotusalliance.org">LOTUS Alliance</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h4>Drop Us a Line!</h4>
-                        <h4 class="text-color"></h4>
-                        <h4><a href="hello@lotusnomads.org" class="text-color">hello@lotusnomads.org</a></h4>
-                        <p>We'd Love to Hear From You</p>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    </div>
-</body>
-
-</html>
-
-
-
+ 

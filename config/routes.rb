@@ -1,6 +1,24 @@
 Rails.application.routes.draw do
 
     root to: 'site#index'
+
+    get '/about', to: 'site#about'
+
+    get '/hotels', to: 'site#hotels'
+
+    get '/destinations', to: 'site#destinations'
+
+    get '/blog', to: 'site#blog'
+
+    get '/faq', to: 'site#faq'
+
+    get '/contact', to: 'site#contact'
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
