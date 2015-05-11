@@ -20,5 +20,8 @@ class SiteController < ApplicationController
 	def contact
 	end
 
+	def hoteldetails
+	end
+
 end
 

@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
     get '/signup', to: 'site#signup'
 
+    get '/hoteldetails', to: 'site#hoteldetails'
+
+  
+
 
 
 
