@@ -18,11 +18,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'less-rails-fontawesome'
-<<<<<<< HEAD
-gem 'font'
-=======
-
->>>>>>> origin/front_end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
