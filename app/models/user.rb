@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :validatable
   has_many :hotels
   has_many :establishments
+  has_many :certified_hotels
 end
