@@ -1,0 +1,100 @@
+<body>
+
+    <!-- FACEBOOK WIDGET -->
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- /FACEBOOK WIDGET -->
+    <div class="global-wrap">
+        <header id="main-header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                          <a class="logo" href="/">
+                            <%= image_tag("LOTUS_Nomads_logo", height: '50', width: '110') %></a>
+                        </div>
+                        <div class="col-md-3 col-md-offset-2">
+                            <form class="main-header-search">
+                                <div class="form-group form-group-icon-left">
+                                    <i class="fa fa-search input-icon"></i>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="top-user-area clearfix">
+                                <ul class="top-user-area-list list list-horizontal list-border">
+                                  <!--   <li class="top-user-area-avatar">
+                                        <a href="user-profile.html">
+                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a> -->
+            
+                                    <li><a href="signup">Sign Up</a>
+                                    </li>
+                                    <li><a href="about">Globetrot Graciously</a>
+                                    </li>
+                                    <li class="top-user-area-lang nav-drop">
+                                       <!--  <a href="#">
+                                            <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
+                                        </a> -->
+                                        <!-- <ul class="list nav-drop-menu">
+                                            <li>
+                                                <a title="German" href="#">
+                                                    <img src="img/flags/32/de.png" alt="Image Alternative text" title="Image Title" /><span class="right">GER</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Japanise" href="#">
+                                                    <img src="img/flags/32/jp.png" alt="Image Alternative text" title="Image Title" /><span class="right">JAP</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Italian" href="#">
+                                                    <img src="img/flags/32/it.png" alt="Image Alternative text" title="Image Title" /><span class="right">ITA</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="French" href="#">
+                                                    <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" /><span class="right">FRE</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Russian" href="#">
+                                                    <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">RUS</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Korean" href="#">
+                                                    <img src="img/flags/32/kr.png" alt="Image Alternative text" title="Image Title" /><span class="right">KOR</span>
+                                                </a>
+                                            </li>
+                                        </ul> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav">
+                    <ul class="slimmenu" id="slimmenu">
+                        <li><a href="about">About</a></li>
+                        <li><a href="hotels">Hotels</a>
+                        <li><a href="destinations">Destinations</a></li>
+                        <li><a href="blog">Blog</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </header>

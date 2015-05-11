@@ -1,11 +1,33 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   # devise_for :users, controllers: { sessions: "users/sessions" }
 
   # Route customization for Devise - ask Jane before changing
   devise_for :users, path: "/", path_names: { sign_in: 'signin', sign_out: 'signout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: '', sign_up: 'signup' }, controllers: { sessions: "users/sessions" }
 
-  root to: 'site#index'
+=======
+    root to: 'site#index'
+
+    get '/about', to: 'site#about'
+
+    get '/hotels', to: 'site#hotels'
+
+    get '/destinations', to: 'site#destinations'
+
+    get '/blog', to: 'site#blog'
+
+    get '/faq', to: 'site#faq'
+
+    get '/contact', to: 'site#contact'
+
+    get '/signup', to: 'site#signup'
+
+
+
+
+
+>>>>>>> origin/front_end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
