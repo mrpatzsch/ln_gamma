@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { sessions: "users/sessions" }
+  # devise_for :users, controllers: { sessions: "users/sessions" }
+
+  # Route customization for Devise - ask Jane before changing
+  devise_for :users, path: "/", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: '', sign_up: 'signup' }, controllers: { sessions: "users/sessions" }
+
 
   root to: 'site#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
