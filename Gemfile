@@ -50,5 +50,7 @@ group :development, :test do
 
   # Devise for authentication
   gem 'devise'
+
+  gem 'rspec-rails', '~> 3.0.0'
 end
 
