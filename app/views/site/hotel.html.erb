@@ -19,6 +19,15 @@
                 <header class="booking-item-header">
                     <div class="row">
                         <div class="col-md-9">
+                            <h1><%= @hotel["HotelSummary"]["name"] %></h1>
+                            <p>
+                            <%= raw CGI.unescapeHTML(@hotel["HotelDetails"]["areaInformation"]) %>
+                            </p>
+                            <img src="<%= @hotel["HotelImages"]["HotelImage"][0]["url"] %>">
+                            <p>
+                            <%= @hotel["HotelDetails"]["hotelPolicy"]%>
+                            </p>
+
                             <h2 class="lh1em">InterContinental New York Barclay</h2>
                             <p class="lh1em text-small"><i class="fa fa-map-marker"></i> 6782 Sarasea Circle, Siesta Key, FL 34242</p>
                             <ul class="list list-inline text-small">
@@ -30,7 +39,7 @@
                             </ul>
                         </div>
                         <div class="col-md-3">
-                            <p class="booking-item-header-price"><small>price from</small>  <span class="text-lg">$350</span>/night</p>
+                            <p class="booking-item-header-price"><small>price from</small>  <span class="text-lg"><%= number_to_currency(@hotel["HotelSummary"]["lowRate"]) %></span>/night</p>
                         </div>
                     </div>
                 </header>
