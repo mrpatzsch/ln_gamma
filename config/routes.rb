@@ -22,8 +22,10 @@
     get '/signup', to: 'site#signup'
     
     post '/hotels', to: 'site#hotels'
+    
+    post '/', to: 'site#hotels'
 
-    get '/hoteldetails', to: 'site#hoteldetails'
+    get '/hotels/:hotelId', to: 'site#hotel'
 
     get '/bucketlist', to: 'users#bucketlist'
 
