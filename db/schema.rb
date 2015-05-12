@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150512031932) do
+ActiveRecord::Schema.define(version: 20150512223059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bucketlists", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "certified_hotel_id"
+    t.integer  "destination_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "certified_hotels", force: :cascade do |t|
     t.string   "name"

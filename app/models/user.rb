@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   has_many :hotels
   has_many :establishments
   has_many :certified_hotels
+  has_many :bucketlists
 end
