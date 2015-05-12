@@ -11,6 +11,9 @@ class SiteController < ApplicationController
       puts "HOTELS \n\n\n\n\n\n\n\n\n\n\n\n"
       puts hotels
       @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
+
+      # Iterate through API response and compare to Certified hotel DB 
+      # render results 
     end
   end
 
