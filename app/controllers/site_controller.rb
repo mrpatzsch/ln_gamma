@@ -1,4 +1,5 @@
 class SiteController < ApplicationController
+
   def hotels
     @hotel = Hotel.new
     city = params[:city]

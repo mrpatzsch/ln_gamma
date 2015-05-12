@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     get '/signup', to: 'site#signup'
     
     post '/hotels', to: 'site#hotels'
+    post '/', to: 'site#hotels'
 
     get '/hoteldetails', to: 'site#hoteldetails'
 

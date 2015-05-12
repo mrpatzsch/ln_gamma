@@ -1,7 +1,4 @@
 class HotelsController < ApplicationController
-  def index
-    render :index 
-  end
 
   def hotels 
     @hotel = Hotel.new
