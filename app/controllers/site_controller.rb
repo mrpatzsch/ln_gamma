@@ -6,10 +6,12 @@ class SiteController < ApplicationController
     stateProvinceCode = params[:state]
     arrive = params[:arrive]
     depart = params[:depart]
-    hotels = Hotel.show_hotels(city, stateProvinceCode, arrive, depart)
-    puts "HOTELS \n\n\n\n\n\n\n\n\n\n\n\n"
-    puts hotels
-    @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
+    if city && stateProvinceCode && arrive && depart
+      hotels = Hotel.show_hotels(city, stateProvinceCode, arrive, depart)
+      puts "HOTELS \n\n\n\n\n\n\n\n\n\n\n\n"
+      puts hotels
+      @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
+    end
   end
 
   def hotel
