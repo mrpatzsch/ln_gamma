@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
 
   # devise_for :users, controllers: { sessions: "users/sessions" }
 
@@ -23,8 +23,12 @@ Rails.application.routes.draw do
 
     get '/hoteldetails', to: 'site#hoteldetails'
 
+    get '/bucketlist', to: 'users#bucketlist'
+
  resources :destinations
     
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
