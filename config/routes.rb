@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
     get '/signup', to: 'site#signup'
 
+    get '/hoteldetails', to: 'site#hoteldetails'
+
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
