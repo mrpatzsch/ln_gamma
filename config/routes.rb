@@ -23,7 +23,8 @@ Rails.application.routes.draw do
 
     get '/hoteldetails', to: 'site#hoteldetails'
 
-  
+    resources: destinations
+    
 
 
   # The priority is based upon order of creation: first created -> highest priority.
