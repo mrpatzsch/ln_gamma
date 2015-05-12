@@ -284,7 +284,7 @@
           <ul class="hotels_list">
             <% if @hotels %>
             <% @hotels.each do |hotel| %>
-                <li class="hotel_name"><%= hotel["name"] %></li>
+                <a href="/hotels/<%= hotel["hotelId"] %>"><li class="hotel_name"><%= hotel["name"] %></li></a>
                 <li class="hotel_price"><%= number_to_currency(hotel["lowRate"]) %></li>
                 <li class="hotel_rating"><%= hotel["hotelRating"] %></li>
                 <li><img src="http://images.travelnow.com/<%= hotel["thumbNailUrl"] %>" class="hotel_thumb"></li>

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     post '/hotels', to: 'site#hotels'
     post '/', to: 'site#hotels'
 
-    get '/hoteldetails', to: 'site#hoteldetails'
+    get '/hotels/:hotelId', to: 'site#hotel'
 
   
 

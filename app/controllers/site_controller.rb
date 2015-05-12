@@ -12,6 +12,12 @@ class SiteController < ApplicationController
     @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
   end
 
+  def hotel
+    hotelId = params[:hotelId]
+    hotel = Hotel.show_hotel(hotelId)
+    @hotel = hotel["HotelInformationResponse"]
+  end
+
   def destinations
   end
 
