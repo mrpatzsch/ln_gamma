@@ -36,8 +36,16 @@
                                   <!--   <li class="top-user-area-avatar">
                                         <a href="user-profile.html">
                                             <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a> -->
-            
-                                    <li><a href="signup">Sign Up</a>
+
+                                    <li>
+                                        <div id="nav">
+                                          <% if user_signed_in? %>
+                                            Hello <%= current_user.email %>!
+                                            <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+                                          <% else %>
+                                            <%= link_to 'Sign up', new_user_registration_path %> or <%= link_to 'Log in', new_user_session_path %>
+                                          <% end %>
+                                        </div>
                                     </li>
                                     <li><a href="about">Globetrot Graciously</a>
                                     </li>
@@ -93,7 +101,7 @@
                         <li><a href="blog">Blog</a></li>
                         <li><a href="faq">FAQ</a></li>
                         <li><a href="contact">Contact</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
