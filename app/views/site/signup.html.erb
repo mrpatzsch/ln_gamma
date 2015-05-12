@@ -9,23 +9,30 @@
         </div>
         <div class="col-md-4">
             <h3>Login</h3>
-            <form>
-            <%= form_tag do %>
-            <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
-                <label>Email</label></br>
-                <%= email_field(:user, :address) %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field">
+                  <%= f.label :email %><br />
+                  <%= f.email_field :email, autofocus: true %>
+              </div>
 
+              <div class="field">
+                  <%= f.label :password %><br />
+                  <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
             </div>
+            <% end -%>
 
-            <div class="form-group form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
-                <label>Password</label></br>
-                <%= password_field_tag(:password) %>
-
+            <div class="actions">
+              <%= f.submit "Log in" %>
             </div>
+          <% end %>
 
-            <input class="btn btn-primary" type="submit" value="Bon Voyage!" />
-            <% end %>
-        </form>
+        <%= render "devise/shared/links" %>
     </div>
     <div class="col-md-4">
         <h3>New To Nomads?</h3>
