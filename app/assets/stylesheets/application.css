@@ -26,3 +26,16 @@
 
    font-family:"Candara", "TradeGothic", "Trebuchet MS", Helvetica, sans-serif;
   */
+
+  .hotel_thumb {
+    height: 100px;
+    width: 100px;
+  }
+
+  .hotels_list li {
+    list-style-type: none;
+  }
+
+  .hotels_list img {
+    padding-bottom: 10px;
+  }
