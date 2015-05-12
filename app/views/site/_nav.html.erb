@@ -47,7 +47,13 @@
                                           <% end %>
                                         </div>
                                     </li>
-                                    <li><a href="about">Globetrot Graciously</a>
+                                    <li>
+                                        <a href="about">Globetrot Graciously</a>
+                                    </li>
+                                    <li>
+                                        <% if user_signed_in? %>
+                                            <a href="/bucketlist">Bucket List</a>
+                                        <% end %>
                                     </li>
                                     <li class="top-user-area-lang nav-drop">
                                        <!--  <a href="#">
@@ -101,7 +107,11 @@
                         <li><a href="blog">Blog</a></li>
                         <li><a href="faq">FAQ</a></li>
                         <li><a href="contact">Contact</a></li>
-
+                        <li>
+                            <% if user_signed_in? %>
+                                <a href="/bucketlist">Bucket List</a>
+                            <% end %>
+                        </li>
                     </ul>
                 </div>
             </div>
