@@ -20,6 +20,8 @@
     get '/contact', to: 'site#contact'
 
     get '/signup', to: 'site#signup'
+    
+    post '/hotels', to: 'site#hotels'
 
     get '/hoteldetails', to: 'site#hoteldetails'
 
