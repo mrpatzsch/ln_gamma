@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # devise_for :users, controllers: { sessions: "users/sessions" }
 
   # Route customization for Devise - ask Jane before changing
-  devise_for :users, path: "/", path_names: { sign_in: 'signin', sign_out: 'signout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: '', sign_up: 'signup' }, controllers: { sessions: "users/sessions" }
+  devise_for :users, path: "/", path_names: { sign_in: 'signin', sign_out: 'signout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: '', sign_up: 'signup' }, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
 
     root to: 'site#index'
 
