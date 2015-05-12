@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     get '/hotels', to: 'site#hotels'
 
-    get '/destinations', to: 'site#destinations'
+    get '/destinations', to: 'destinations#index'
 
     get '/blog', to: 'site#blog'
 
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
     get '/hoteldetails', to: 'site#hoteldetails'
 
-    resources: destinations
+ resources :destinations
     
 
 
