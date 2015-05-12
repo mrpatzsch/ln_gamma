@@ -1,3 +1,15 @@
+<!-- LOGIN PAGE WITH DEVISE! DO NOT TOUCH -->
+
+<%= render './site/head' %>
+<%= render './site/nav' %>
+
+<div class="container">
+    <div class="row" data-gutter="60">
+        <div class="col-md-4">
+            <h3>Welcome to LOTUS Nomads!</h3>
+            <p>Do you love traveling the world with a conscience as much as we do? Yeah, we thought so. Sign up and discover even more of the incredible places our globetrotters have dug up just for you. You'll be packing your bags in no time. </p>
+        </div>
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -17,10 +29,16 @@
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
+  <br>
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+  </div>
+</div>
+<div class="gap"></div>
+<%= render './site/footer' %>
+
+
