@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     get '/contact', to: 'site#contact'
 
     get '/signup', to: 'site#signup'
+    
+    post '/hotels', to: 'site#hotels'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

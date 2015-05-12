@@ -1,5 +1,9 @@
-class SiteController < ApplicationController
-  def hotels
+class HotelsController < ApplicationController
+  def index
+    render :index 
+  end
+
+  def hotels 
     @hotel = Hotel.new
     city = params[:city]
     stateProvinceCode = params[:state]
@@ -11,17 +15,9 @@ class SiteController < ApplicationController
     @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
   end
 
-  def destinations
+  def hotel 
+    hotelId = params[:hotelId]
+    hotel = Hotel.show_hotel(hotelId)
+    @hotel = hotel["HotelInformationResponse"]
   end
-
-  def blog
-  end
-
-  def faq
-  end
-
-  def contact
-  end
-
 end
-
