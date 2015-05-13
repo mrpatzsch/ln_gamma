@@ -6,6 +6,10 @@ class DestinationPolicy < ApplicationPolicy
     @list_item = list_item
   end
 
+  def add_to_bucket_list?
+    user_signed_in?
+  end
+
   def create?
     user_signed_in?
   end
