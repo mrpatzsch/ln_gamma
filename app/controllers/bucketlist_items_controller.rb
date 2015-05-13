@@ -3,11 +3,12 @@ class BucketlistItemsController < ApplicationController
   def index
   end
 
-  def new
+  def create
+    binding.pry
     # create record in DB
-    @bucketlistitems = Bucketlistitems.create(bucketlistitems_params)
+    @bucketlistitems = BucketlistItem.create(bucketlistitem_params)
     # redirect to index view (in bucketlists)
-    # redirect_to :action => 'index'
+    redirect_to :back
   end
 
   def add
@@ -24,7 +25,7 @@ class BucketlistItemsController < ApplicationController
 
   private
 
-  def bucketlistitems_params
-    params.require(:bucketlistitem[]).permit(:user_id, :destination_id)
+  def bucketlistitem_params
+    params.require(:bucketlist_item).permit(:destination_id)
   end
 end

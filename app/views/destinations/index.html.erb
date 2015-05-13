@@ -23,9 +23,16 @@
         Name: <%= d.name %><br>
         <!-- Setup form for creating new bucketlist items -->
         <% if current_user %>
-          <div>
-            <%= button_to "Add to Bucketlist", "/bucketlist", params: {destination_id: d.id}, method: "post" %>
-          </div>
+          <% if false  %>
+            <div>
+              <%= button_to "Add to Bucketlist", "/bucketlist", params: {destination_id: d.id}, method: "post" %>
+            </div>
+          <% end %>
+          <%= form_for BucketlistItem.new do |f| %>
+            <!-- Enter destination id -->
+            <%= f.hidden_field :destination_id, value: d.id %>
+            <%= f.submit "Add to Bucket List" %>
+          <% end %>
         <% end %>
         <!-- Show destination certification -->
         Certification: <%= d.certification %>

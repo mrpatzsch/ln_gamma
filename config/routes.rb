@@ -27,9 +27,11 @@
 
     get '/hotels/:hotelId', to: 'site#hotel'
 
-    get '/bucketlist', to: 'bucketlistitems#index'
+    # get '/bucketlist', to: 'bucketlist_items#index'
 
-    post '/bucketlist', to: 'bucketlistitems#new'
+    # post '/bucketlist', to: 'bucketlistitems#create'
+
+resources :bucketlist_items, only: [:create, :destroy, :index]
 
  resources :destinations
 
