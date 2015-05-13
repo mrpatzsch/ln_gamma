@@ -22,11 +22,10 @@
         <!-- Show destination name -->
         Name: <%= d.name %><br>
         <!-- Setup form for creating new bucketlist items -->
-        <%= form_for :bucketlist, :url => url_for(:controller => 'bucketlists', :action => 'new') do |f| %>
-          <!-- Enter destination id -->
-          <%= f.label :destination_id %>:
-          <%= f.text_field :destination_id %>
-          <%= f.submit "Add to Bucket List" %>
+        <% if current_user %>
+          <div>
+            <%= button_to "Add to Bucketlist", "/bucketlist", params: {destination_id: d.id}, method: "post" %>
+          </div>
         <% end %>
         <!-- Show destination certification -->
         Certification: <%= d.certification %>
