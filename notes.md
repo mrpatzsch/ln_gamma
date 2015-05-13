@@ -100,3 +100,5 @@ http://www.programmableweb.com/api/addthis-smart-layers
     <span itemprop="postalCode">Zip COde </span>
  </div>
 
+<h1>PICTURE</h1>
+      <%= image_tag("http://i.imgur.com/f94ztuG.jpg") %>

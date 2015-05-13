@@ -193,11 +193,14 @@ certified_hotels = Certified_hotels.create([
     { name: 'J.W. Marriott San Antonio Resort',
     hotel_id: '',
     certification: 'LEED',}
+    { name: 'Portola Hotel & Spa Monterey',
+    hotel_id: '111950',
+    certification: 'LEED',}
 
 
 
 
-    }])
+    ])
 
 destinations = Destination.create([
   { name: 'Akha Ama',
@@ -224,4 +227,15 @@ Drive Change works with individuals aged 16-25 all of whom have had direct impac
     recommended: 'The Famous Maple Grilled Cheese
 ' }])
 
+ { name: 'TEST PICTURE',
+    location: 'Plainfield, CT',
+    website: 'http://i.imgur.com/jycojI8.jpg',
+    certification: 'Hires Inclusively, Staff Development, ',
+
+    desc_prod: 'The Victorian, located in the Northeastern quadrant of Connecticut, serves traditional New England breakfast and lunch Monday through Friday. All menu items including the breads, pies and other assorted sweets goods are baked up daily on-site. Guests are welcome to enjoy their meals and wander around the property which boasts a greenhouse bearing both flowers and vegetables. All of the baked goods can also be bought out of the bakery case or wholesale to be sold at farm stands throughout the area. The Victorian’s fruit pies are renowned in the region for their classic excellence with all fruit sourced locally.',
+    desc_good: ' In the early 1980’s Connecticut’s Legislature voted to close down state institutions, which housed individuals with intellectual and developmental disabilities. At that point all residents of the institutions were returned to their hometowns and required to seek services privately. Out of this need Seabird Enterprises was established as a private 501(c)3 nonprofit dedicated to providing vocational training to people with developmental disabilities. Seabird Enterprises owns and operates The Victorian as part of their vocational training program.
+Trainees learn all aspects of working in a restaurant from wait staff skills to baking and food preparation. Much of the training replicates the processes of the local chain restaurants, which typically hire trainees upon completion of their time with Seabird. These skills can be used as a step toward independent employment, while others make a career of the program. Trainees in the restaurant are paid through the program. Wages are based on average productivity and hours worked. These wages typically are offset by entitlements individuals receive from the Social Security Administration. Staff pay and benefits are among the best within the industry.',
+    directions: 'Located off of Route 12 in Plainfield, CT. (860) 564-2505',
+    recommended: 'Made fresh-daily fruit pies!' 
+    }])
 
