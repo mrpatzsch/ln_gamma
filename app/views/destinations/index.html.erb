@@ -16,15 +16,22 @@
       </div>
   </div> -->
   <div>
+    <!-- Loop through destinations -->
     <% @destinations.each do |d| %>
       <div>
-        <%= d.name %><br>
+        <!-- Show destination name -->
+        Name: <%= d.name %><br>
+        <!-- Setup form for creating new bucketlist items -->
         <%= form_for :bucketlist, :url => url_for(:controller => 'bucketlists', :action => 'new') do |f| %>
+          <!-- Enter destination id -->
           <%= f.label :destination_id %>:
           <%= f.text_field :destination_id %>
           <%= f.submit "Add to Bucket List" %>
         <% end %>
-        <%= d.certification %>
+        <!-- Show destination certification -->
+        Certification: <%= d.certification %>
+        <br>
+        ID: <%= d.id %>
       </div>
     <% end %>
   </div>

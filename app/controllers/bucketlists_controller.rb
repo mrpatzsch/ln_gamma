@@ -6,6 +6,7 @@ class BucketlistsController < ApplicationController
   def new
     # create record in DB
     @bucketlist = Bucketlist.create(bucketlist_params)
+    # redirect to index view (in bucketlists)
     redirect_to :action => 'index'
   end
 
