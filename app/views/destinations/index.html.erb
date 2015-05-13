@@ -2,9 +2,9 @@
 <%= render './site/nav' %>
 
   <div class="container">
-            <h1 class="page-title">Recommended Destinations</h1>
+    <h1 class="page-title">Recommended Destinations</h1>
 	</div>
-  <div class="container">
+  <!-- <div class="container">
       <div id="popup-gallery">
           <div class="row row-col-gap">
               <div class="col-md-4">
@@ -14,11 +14,21 @@
               </div>
           </div>
       </div>
+  </div> -->
+  <div>
+    <% @destinations.each do |d|  %>
+      <div>
+        <%= d.name %><br>
+        <%= form_for do |f| %>
+          <div class="actions">
+            <%= f.submit "Add to Bucket List" %>
+          </div>
+        <% end %>
+        <%= d.certification %>
+      </div>
+    <% end %>
   </div>
 
-   								
-
-        <div class="gap"></div>
-
+  <div class="gap"></div>
 
 <%= render './site/footer' %>

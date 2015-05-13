@@ -1,10 +1,11 @@
 class DestinationsController < ApplicationController
 
 	def index
+    @destinations = Destination.all
 	end
 
 	def show
-		@destinations = Destination.find(params[:id])
+		# @destinations = Destination.find(params[:id])
 	end
 
   def add_to_bucket_list
