@@ -27,7 +27,9 @@
 
     get '/hotels/:hotelId', to: 'site#hotel'
 
-    get '/bucketlist', to: 'users#bucketlist'
+    get '/bucketlist', to: 'bucketlists#index'
+
+    post '/bucketlist', to: 'bucketlists#new'
 
  resources :destinations
     

@@ -16,13 +16,13 @@
       </div>
   </div> -->
   <div>
-    <% @destinations.each do |d|  %>
+    <% @destinations.each do |d| %>
       <div>
         <%= d.name %><br>
-        <%= form_for do |f| %>
-          <div class="actions">
-            <%= f.submit "Add to Bucket List" %>
-          </div>
+        <%= form_for :bucketlist, :url => url_for(:controller => 'bucketlists', :action => 'new') do |f| %>
+          <%= f.label :destination_id %>:
+          <%= f.text_field :destination_id %>
+          <%= f.submit "Add to Bucket List" %>
         <% end %>
         <%= d.certification %>
       </div>
