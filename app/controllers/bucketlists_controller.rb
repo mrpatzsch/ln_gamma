@@ -10,6 +10,10 @@ class BucketlistsController < ApplicationController
     redirect_to :action => 'index'
   end
 
+  def save
+    @bucketlist.update_attributes(:destination_id => @destination.id)
+  end
+
   private
 
   def bucketlist_params
