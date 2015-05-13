@@ -18,6 +18,10 @@ class BucketlistsController < ApplicationController
     bucketlist.bucketlists.push bucketlist
   end
 
+  def save
+    @bucketlist.update_attributes(:destination_id => @destination.id)
+  end
+
   private
 
   def bucketlist_params
