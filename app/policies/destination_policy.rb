@@ -1,4 +1,4 @@
-class BucketlistPolicy < ApplicationPolicy
+class DestinationPolicy < ApplicationPolicy
   attr_reader :user, :list_item
 
   def initialize(user, list_item)
@@ -17,6 +17,5 @@ class BucketlistPolicy < ApplicationPolicy
   def destroy?
     user_signed_in?
   end
-
 
 end
