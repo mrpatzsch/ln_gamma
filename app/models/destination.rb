@@ -1,5 +1,5 @@
 class Destination < ActiveRecord::Base
   belongs_to :user
-  has_many :bucketlists
-  accepts_nested_attributes_for :bucketlists
+  has_many :bucketlist_items
+  accepts_nested_attributes_for :bucketlist_items
 end

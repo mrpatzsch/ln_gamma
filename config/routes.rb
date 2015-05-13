@@ -20,9 +20,9 @@
     get '/contact', to: 'site#contact'
 
     get '/signup', to: 'site#signup'
-    
+
     post '/hotels', to: 'site#hotels'
-    
+
     post '/', to: 'site#hotels'
 
     get '/hotels/:hotelId', to: 'site#hotel'
@@ -32,7 +32,7 @@
     post '/bucketlist', to: 'bucketlistitems#new'
 
  resources :destinations
-    
+
 
 
 
