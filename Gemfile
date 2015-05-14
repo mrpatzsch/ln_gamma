@@ -43,8 +43,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise for authentication
 gem 'devise'
 
-# Pundit for authorization
-gem 'pundit'
+# # Pundit for authorization
+# gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
