@@ -1,17 +1,20 @@
 <div class="form">
   <div id="error"></div>
+
     <%= form_tag :hotels, :method => 'post', action: '/hotels' do %>
-        <div class="col-md-6">
+        <div class="col-md-5">
+          <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
           <%= label_tag(:destination, "Where are you going?: ") %>
-          <%= text_field_tag :destination %>
+          <%= text_field_tag(:destination, nil, placeholder: ' City, State, Country', class: "typeahead tt-input form-control") %>
+        </div>
         </div>
         <div class="col-md-2">
           <%= label_tag(:arrive, "Arrive:") %>
-          <%= date_field_tag(:arrive) %>
+          <%= date_field_tag(:arrive, nil, class: "form-control")  %>
         </div>
         <div class="col-md-4">
           <%= label_tag(:depart, "Depart:") %>
-          <%= date_field_tag(:depart) %>
+          <%= date_field_tag(:depart, nil, class: "form-control") %>
           <%= submit_tag "Search", :id => "submit_button", :class => "btn search_button" %>
         </div>
       <% end %>

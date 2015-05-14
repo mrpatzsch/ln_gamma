@@ -88,20 +88,10 @@
     text-align: center;
   }
 
-  #city {
-    height: 40px;
-    width: 200px;
-  }
-
-  #state {
-    height: 40px;
-    width: 50px;
-  }
-
-  #country {
-    height: 40px;
-    width: 50px;
-  }
+ #destination {
+   height: 40px;
+   width: 400px;
+ }
 
   #submit_button {
     margin-left: 20px;
