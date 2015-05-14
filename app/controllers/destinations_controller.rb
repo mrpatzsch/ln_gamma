@@ -8,5 +8,4 @@ class DestinationsController < ApplicationController
 		@destination = Destination.find(params[:id])
 	end
 
-
 end
