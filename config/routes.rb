@@ -31,7 +31,7 @@
 
     # post '/bucketlist', to: 'bucketlistitems#create'
 
-resources :bucketlist_items, only: [:create, :destroy, :index]
+  resources :bucketlist_items, only: [:create, :destroy, :index]
 
  resources :destinations
 
