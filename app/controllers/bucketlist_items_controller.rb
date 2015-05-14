@@ -1,6 +1,7 @@
 class BucketlistItemsController < ApplicationController
 
   def index
+    @bucketlistitems = current_user.bucketlist_items.find_all
   end
 
   def create
