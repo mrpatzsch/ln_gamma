@@ -4,6 +4,6 @@ class DestinationsController < ApplicationController
 	end
 	
 	def show
-		@destinations = Destination.find(params[:id])
+		@destination = Destination.find(params[:id])
 	end
 end

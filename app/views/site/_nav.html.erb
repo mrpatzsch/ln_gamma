@@ -3,14 +3,14 @@
     <!-- FACEBOOK WIDGET -->
     <div id="fb-root"></div>
     <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+       // (function(d, s, id) {
+       //      var js, fjs = d.getElementsByTagName(s)[0];
+       //       if (d.getElementById(id)) return;
+       //      js = d.createElement(s);
+       //      js.id = id;
+       //      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+       //      fjs.parentNode.insertBefore(js, fjs);
+       //  }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- /FACEBOOK WIDGET -->
     <div class="global-wrap">
@@ -49,14 +49,11 @@
                                     </li>
                                     <li>
                                         <% if user_signed_in? %>
-                                            <a href="/bucketlist">My Bucket List</a>
+                                            <a href="/bucketlist">My Bucket List</a> | <a href="about">Globetrot Graciously</a>
                                         <% end %>
                                     </li>
-                                    <li>
-                                        <a href="about">Globetrot Graciously</a>
-                                    </li>
-                                    <li class="top-user-area-lang nav-drop">
-                                       <!--  <a href="#">
+<!--                                     <li class="top-user-area-lang nav-drop">
+ -->                                       <!--  <a href="#">
                                             <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
                                         </a> -->
                                         <!-- <ul class="list nav-drop-menu">
@@ -91,8 +88,8 @@
                                                 </a>
                                             </li>
                                         </ul> -->
-                                    </li>
-                                </ul>
+<!--                                     </li>
+ -->                                </ul>
                             </div>
                         </div>
                     </div>

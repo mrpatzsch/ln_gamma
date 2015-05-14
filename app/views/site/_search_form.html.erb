@@ -13,13 +13,13 @@
           <label for="#country">Country:</label>
           <%= text_field_tag(:country) %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <%= label_tag(:arrive, "Arrive:") %>
           <%= date_field_tag(:arrive) %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <%= label_tag(:depart, "Depart:") %>
           <%= date_field_tag(:depart) %>
-          <%= submit_tag "Search", :id => "submit_button" %>
+          <%= submit_tag "Search", :id => "submit_button", :class => "btn search_button" %>
         </div>
       <% end %>
