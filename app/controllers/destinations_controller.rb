@@ -12,15 +12,12 @@ class DestinationsController < ApplicationController
 	end
 
 	def update
-    respond_to do |format|
-      if @destination.update(destination_params)
-        format.html { redirect_to @destination, notice: 'Destination was successfully updated.' }
-        format.json { render :show, status: :ok, location: @destination }
-      else
-        format.html { render :edit }
-        format.json { render json: @destination.errors, status: :unprocessable_entity }
-      end
-    end
+    destination_id = params[:id]
+    destination = Destination.find(destination_id)
+
+    destination.update_attributes(destination_params)
+
+    redirect_to "/destinations/#{destination.id}"
   end
 
 private

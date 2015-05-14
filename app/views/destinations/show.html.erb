@@ -87,7 +87,7 @@
   <div class="article post">
       <header class="post-header">
           <a class="hover-img" href="#">
-            <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
+            <img src="<%= @destination.image %>" alt="<%= @destination.name %>" title="<%= @destination.seo_tags %>" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
           </a>
       </header>
       <div class="post-inner">
@@ -95,7 +95,7 @@
           <ul class="post-meta">
             <li><i class="fa fa-map-marker"></i><a href="#"><%= @destination.location%></a>
             </li>
-            <li><i class="fa fa-tags"></i><a href="#">Coffee</a>, <a href="#">Coop</a>
+            <li><i class="fa fa-tags"></i><a href="#"><%= @destination.seo_tags%></a>
             </li>
             <li><i class="fa fa-user"></i><a href="#">LOTUS Nomads</a>
             </li>
