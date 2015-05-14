@@ -35,9 +35,11 @@
             <!-- <a class="fa fa-times booking-item-wishlist-remove" href="#" rel="tooltip" data-placement="top" title="remove from wishlist"></a> -->
             <a class="booking-item" href="#">
               <div class="row">
-                <div class="col-md-3">
-                  <%= i.destination.name %>
-                  <img src="<%= i.destination.image %>" alt="<%= i.destination.name %>" title="<%= i.destination.seo_tags %>" />
+                <div class="col-md-4">
+                  <%= i.destination.name %><br>
+                  <%= i.destination.location %><br>
+                  <%= i.destination.category %>
+                  <img src="<%= i.destination.image_content_type %>" alt="<%= i.destination.name %>" title="<%= i.destination.seo_tags %>" />
                 </div>
                 <div class="col-md-6">
                   <div class="booking-item-rating">
