@@ -14,3 +14,27 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// if (city === "") {
+//	event.preventDefault()
+// stop form from submitting
+// iserror? ==== true?
+//}
+
+//$(default).html("something went wrong")
+// send an error message 
+
+// autocomplete = event handler passed as object 
+// source: 
+//
+
+$('#submit_button').click(function(event) {
+	var city = $('#city').val();
+
+	if (city === "") {
+		event.preventDefault();
+		$('#error').html("Something went wrong");
+	}
+});
+
