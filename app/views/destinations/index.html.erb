@@ -28,10 +28,17 @@
               <%= button_to "Add to Bucketlist", "/bucketlist", params: {destination_id: d.id}, method: "post" %>
             </div>
           <% end %>
-          <%= form_for BucketlistItem.new do |f| %>
-            <!-- Enter destination id -->
-            <%= f.hidden_field :destination_id, value: d.id %>
-            <%= f.submit "Add to Bucket List" %>
+          <% if current_user.has_bucket_list_item?(d.id) %>
+            <%= link_to "Remove from Bucket List", { :controller => "bucketlist_items",
+                          :action => "destroy",
+                          :destination_id => d.id },
+                          :method => :delete %>
+          <% else %>
+            <%= form_for BucketlistItem.new do |f| %>
+              <!-- Enter destination id -->
+              <%= f.hidden_field :destination_id, value: d.id %>
+              <%= f.submit "Add to Bucket List" %>
+            <% end %>
           <% end %>
         <% end %>
         <!-- Show destination certification -->
