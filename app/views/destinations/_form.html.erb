@@ -4,14 +4,14 @@
       <h2><%= pluralize(@destination.errors.count, "error") %> prohibited this destination from being saved:</h2>
 
       <ul>
-      <% @destination.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @destination.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-<div class="field">
+  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
@@ -43,23 +43,22 @@
     <%= f.label :directions %><br>
     <%= f.text_field :directions %>
   </div>
-    <div class="field">
+  <div class="field">
     <%= f.label :recommended %><br>
     <%= f.text_field :recommended %>
   </div>
-      <div class="field">
+  <div class="field">
     <%= f.label :seo_tags %><br>
     <%= f.text_field :seo_tags %>
   </div>
-
-      <div class="field">
+  <div class="field">
     <%= f.label :image %><br>
     <%= f.file_field :image %><br>
-    </div>
-
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
 <%= link_to 'Show', @destinations %> |
 <%= link_to 'Back', destinations_path %>
