@@ -22,6 +22,7 @@
               <%= d.location %><br>
               <%= d.category %><br>
               <!-- Setup form for creating new bucketlist items -->
+              <% if current_user %>
               <% if current_user.has_bucket_list_item?(d.id) %>
                 <%= link_to "Remove from Bucket List", { :controller => "bucketlist_items",
                                 :action => "destroy",
@@ -33,6 +34,7 @@
                   <%= f.hidden_field :destination_id, value: d.id %>
                   <%= f.submit "Add to Bucket List" %>
                 <% end %>
+              <% end %>
               <% end %>
               <br>
               <br>
