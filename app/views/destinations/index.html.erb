@@ -16,11 +16,9 @@
                 <%= d.name %><br>
                 <%= d.location %><br>
                 <%= d.category %><br>
-                <a class="hover-img popup-gallery-image" href="destinations/1">
-                  <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
-                  <i class="fa fa-heart round box-icon-small hover-icon i round">
-                  </i>
-                </a>
+                  <a class="hover-img" href="#">
+            <img src="<%= @destination.image_file_name %>" alt="<%= @destination.name %>" title="<%= @destination.seo_tags %>" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
+          </a>
                 <!-- Setup form for creating new bucketlist items -->
                 <% if current_user.has_bucket_list_item?(d.id) %>
                   <%= link_to "Remove from Bucket List", { :controller => "bucketlist_items",
