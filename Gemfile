@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'typhoeus'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -21,6 +22,8 @@ gem 'less-rails-fontawesome'
 
 # image storing & rendering, works with image magick
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,7 +46,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Devise for authentication
 gem 'devise'
 
-# # Pundit for authorization
+
+# Pundit for authorization
 # gem 'pundit'
 
 group :development, :test do

@@ -2,19 +2,15 @@ class SiteController < ApplicationController
 
   def hotels
     @hotel = Hotel.new
-    city = params[:city]
-    stateProvinceCode = params[:state]
-    country = params[:country]
+    destination = params[:destination]
     arrive = params[:arrive]
     depart = params[:depart]
 
-    if city && stateProvinceCode && country && arrive && depart
-      if(city != '')
-        hotels = Hotel.show_hotels(city, stateProvinceCode, country, arrive, depart)
+    if destination
+        hotels = Hotel.show_hotels(destination, arrive, depart)
         @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
       else
         flash.now[:error] = "Please enter a city"
-      end
       # Iterate through API response and compare to Certified hotel DB 
       # render results 
     end

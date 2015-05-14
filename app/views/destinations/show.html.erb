@@ -2,138 +2,143 @@
 <%= render './site/nav' %>
 
 
-  <div class="container">
+<div class="container">
   <div itemscope itemtype="http://schema.org/Restaurant">
-      <h2 class="page-title" span itemprop="name"> <%= @destinations.name%> </span></h2>  
+    <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2>
   </div>
 
   <div class="container">
-      <div class="row">
-          <div class="col-md-3">
-              <aside class="sidebar-left">
-                  <div class="sidebar-widget">
-                      <div class="Form">
-                          <input class="form-control" placeholder="Search..." type="text" />
-                      </div>
-                  </div>
-                  <div class="sidebar-widget">
-                      <h4>Categories</h4>
-                      <ul class="icon-list list-category">
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Photos <small >(63)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Vacation <small >(94)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Flights <small >(56)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Travel Advices <small >(80)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Trending Now <small >(83)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Hotels <small >(89)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Places to Go <small >(69)</small></a>
-                          </li>
-                          <li><a href="#"><i class="fa fa-angle-right"></i>Travel Stories <small >(64)</small></a>
-                          </li>
-                      </ul>
-                  </div>
-                 
-                  <div class="sidebar-widget">
-                      <h4>Twitter Feed</h4>
-                      <div class="twitter" id="twitter"></div>
-                  </div>
-                  <div class="sidebar-widget">
-                      <h4>Recent Comments</h4>
-                      <ul class="thumb-list thumb-list-right">
-                          <li>
-                              <a href="#">
-                                  <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="Afro" />
-                              </a>
-                              <div class="thumb-list-item-caption">
-                                  <p class="thumb-list-item-meta">6 minutes ago</p>
-                                  <h4 class="thumb-list-item-title"><a href="#">Keith Churchill</a></h4>
-                                  <p class="thumb-list-item-desciption">Erat praesent cursus taciti a dictum ridiculus...</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="Gamer Chick" />
-                              </a>
-                              <div class="thumb-list-item-caption">
-                                  <p class="thumb-list-item-meta">5 minutes ago</p>
-                                  <h4 class="thumb-list-item-title"><a href="#">Joseph Hudson</a></h4>
-                                  <p class="thumb-list-item-desciption">Iaculis faucibus etiam nisl facilisi massa ut...</p>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#">
-                                  <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="AMaze" />
-                              </a>
-                              <div class="thumb-list-item-caption">
-                                  <p class="thumb-list-item-meta">5 minutes ago</p>
-                                  <h4 class="thumb-list-item-title"><a href="#">Cheryl Gustin</a></h4>
-                                  <p class="thumb-list-item-desciption">Tempor risus quisque egestas venenatis potenti lobortis...</p>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
-                  
-            
-              </aside>
+    <div class="row">
+      <div class="col-md-3">
+        <aside class="sidebar-left">
+          <div class="sidebar-widget">
+            <div class="Form">
+              <input class="form-control" placeholder="Search..." type="text" />
+            </div>
           </div>
-
-<div class="col-md-9">
-              <!-- START BLOG POST -->
-  <div class="article post">
-      <header class="post-header">
-          <a class="hover-img" href="#">
-            <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
-          </a>
-      </header>
-      <div class="post-inner">
-  
-          <ul class="post-meta">
-            <li><i class="fa fa-map-marker"></i><a href="#"><%= @destinations.location%></a>
-            </li>
-            <li><i class="fa fa-tags"></i><a href="#">Coffee</a>, <a href="#">Coop</a>
-            </li>
-            <li><i class="fa fa-user"></i><a href="#">LOTUS Nomads</a>
-            </li>
-            <li><i class="fa fa-calendar"></i><a href="#"><%= @destinations.created_at %></a>
-            </li>
-          </ul>
-
-            
-      <h3>The Goods</h3>
-          <%= @destinations.desc_prod %>
-
-      <h3>The Good</h3>
-          <%= @destinations.desc_good %>
-
-      <h3>Don't Miss</h3>
-          <%= @destinations.recommended%>
-
-    <div class="gap"></div>
-
-      <h4>Getting There</h4>
-          <%= @destinations.directions%>
-
-      <h4>Learn More</h4>
-          <%= @destinations.website%>
-
+          <div class="sidebar-widget">
+            <h4>Categories</h4>
+            <ul class="icon-list list-category">
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Photos <small >(63)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Vacation <small >(94)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Flights <small >(56)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Travel Advices <small >(80)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Trending Now <small >(83)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Hotels <small >(89)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Places to Go <small >(69)</small></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-angle-right"></i>Travel Stories <small >(64)</small></a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-widget">
+              <h4>Twitter Feed</h4>
+              <div class="twitter" id="twitter"></div>
+          </div>
+          <div class="sidebar-widget">
+            <h4>Recent Comments</h4>
+              <ul class="thumb-list thumb-list-right">
+                <li>
+                  <a href="#">
+                    <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="Afro" />
+                  </a>
+                  <div class="thumb-list-item-caption">
+                    <p class="thumb-list-item-meta">6 minutes ago</p>
+                    <h4 class="thumb-list-item-title"><a href="#">Keith Churchill</a></h4>
+                    <p class="thumb-list-item-desciption">Erat praesent cursus taciti a dictum ridiculus...</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="Gamer Chick" />
+                  </a>
+                  <div class="thumb-list-item-caption">
+                    <p class="thumb-list-item-meta">5 minutes ago</p>
+                    <h4 class="thumb-list-item-title"><a href="#">Joseph Hudson</a></h4>
+                    <p class="thumb-list-item-desciption">Iaculis faucibus etiam nisl facilisi massa ut...</p>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">
+                    <img class="rounded" src="img/70x70.png" alt="Image Alternative text" title="AMaze" />
+                  </a>
+                  <div class="thumb-list-item-caption">
+                    <p class="thumb-list-item-meta">5 minutes ago</p>
+                    <h4 class="thumb-list-item-title"><a href="#">Cheryl Gustin</a></h4>
+                    <p class="thumb-list-item-desciption">Tempor risus quisque egestas venenatis potenti lobortis...</p>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        </aside>
       </div>
-  </div>
-        
-                
-                    <!-- END BLOG POST -->
-  
-<div class="gap"></div>
-</div>
-</div>
-</div>
-</div>
 
+      <div class="col-md-9">
+        <!-- START BLOG POST -->
+        <div class="article post">
+          <header class="post-header">
+            <a class="hover-img" href="#">
+              <img src="<%= @destination.image %>" alt="<%= @destination.name %>" title="<%= @destination.seo_tags %>" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
+            </a>
+          </header>
+          <div class="post-inner">
+            <ul class="post-meta">
+              <li>
+                <i class="fa fa-map-marker"></i><a href="#"><%= @destination.location%></a>
+              </li>
+              <li>
+                <i class="fa fa-tags"></i><a href="#"><%= @destination.seo_tags%></a>
+              </li>
+              <li>
+                <i class="fa fa-user"></i><a href="#">LOTUS Nomads</a>
+              </li>
+              <li>
+                <i class="fa fa-calendar"></i><a href="#"><%= @destination.created_at %></a>
+              </li>
+            </ul>
+
+            <h3>The Goods</h3>
+            <%= @destination.desc_prod %>
+            <br>
+            <br>
+            <h3>The Good</h3>
+            <%= @destination.desc_good %>
+            <br>
+            <br>
+            <h3>Don't Miss</h3>
+            <%= @destination.recommended%>
+            <br>
+            <br>
+            <h4>Getting There</h4>
+            <%= @destination.directions%>
+            <br>
+            <br>
+            <h4>Learn More</h4>
+            <a target= "_blank" href="<%= @destination.website%>"><%= @destination.website %></a>
+            <br>
+            <br>
+          </div>
+        </div>
+        <!-- END BLOG POST -->
+
+        <div class="gap"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= render './site/footer' %>
-
-
