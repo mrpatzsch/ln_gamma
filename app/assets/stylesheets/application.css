@@ -45,11 +45,10 @@
   .hotels_list img {
     padding-bottom: 10px;
   }
-
+  
   .hotels_page {
-    min-height: 500px;
+    padding-bottom: 20px;
   }
-
   .form {
     padding: 10px;
   }
@@ -79,21 +78,21 @@
     font-size: 32px;
   }
 
+  .search_button {
+    background-color: #1b94d2;
+    color: white;
+    font-size: 18px;
+  }
+
   .hotel_title {
     text-align: center;
   }
 
-  #city {
-    height: 40px;
-    width: 200px;
-  }
+ #destination {
+   height: 40px;
+   width: 400px;
+ }
 
-  #state {
-    height: 40px;
-    width: 50px;
-  }
-
-  #country {
-    height: 40px;
-    width: 50px;
+  #submit_button {
+    margin-left: 20px;
   }
