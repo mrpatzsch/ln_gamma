@@ -1,17 +1,9 @@
 <div class="form">
   <div id="error"></div>
     <%= form_tag :hotels, :method => 'post', action: '/hotels' do %>
-        <div class="col-md-3">
-          <label for="#city">City:</label>
-          <%= text_field_tag(:city) %>
-      </div>
-        <div class="col-md-1">
-          <label for="#state">State:</label>
-          <%= text_field_tag(:state) %>
-        </div>
-        <div class="col-md-1">
-          <label for="#country">Country:</label>
-          <%= text_field_tag(:country) %>
+        <div class="col-md-6">
+          <%= label_tag(:destination, "Where are you going?: ") %>
+          <%= text_field_tag :destination %>
         </div>
         <div class="col-md-2">
           <%= label_tag(:arrive, "Arrive:") %>
