@@ -11,7 +11,7 @@
 
     get '/hotels', to: 'site#hotels'
 
-    get '/destinations', to: 'site#destinations'
+    get '/destinations', to: 'destinations#index'
 
     get '/blog', to: 'site#blog'
 
@@ -28,6 +28,11 @@
     get '/hotels/:hotelId', to: 'site#hotel'
 
     get '/bucketlist', to: 'users#bucketlist'
+
+ resources :destinations
+    
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
