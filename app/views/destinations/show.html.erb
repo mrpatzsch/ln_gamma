@@ -4,7 +4,8 @@
 
   <div class="container">
   <div itemscope itemtype="http://schema.org/Restaurant">
-      <h2 class="page-title" span itemprop="name"> <%= @destination.name %> </span></h2>  
+    <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2> 
+
   </div>
 
   <div class="container">
@@ -87,7 +88,7 @@
   <div class="article post">
       <header class="post-header">
           <a class="hover-img" href="#">
-            <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
+            <img src="<%= @destination.image %>" alt="<%= @destination.name %>" title="<%= @destination.seo_tags %>" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
           </a>
       </header>
       <div class="post-inner">
@@ -95,7 +96,7 @@
           <ul class="post-meta">
             <li><i class="fa fa-map-marker"></i><a href="#"><%= @destination.location%></a>
             </li>
-            <li><i class="fa fa-tags"></i><a href="#">Coffee</a>, <a href="#">Coop</a>
+            <li><i class="fa fa-tags"></i><a href="#"><%= @destination.seo_tags%></a>
             </li>
             <li><i class="fa fa-user"></i><a href="#">LOTUS Nomads</a>
             </li>
@@ -106,6 +107,7 @@
             
       <h3>The Goods</h3>
           <%= @destination.desc_prod %>
+<<<<<<< HEAD
 
       <h3>The Good</h3>
           <%= @destination.desc_good %>
@@ -120,6 +122,27 @@
 
       <h4>Learn More</h4>
           <%= @destination.website%>
+=======
+      <br></br>
+
+      <h3>The Good</h3>
+          <%= @destination.desc_good %>
+       <br></br>
+
+      <h3>Don't Miss</h3>
+          <%= @destination.recommended%>
+       <br></br>
+
+      <h4>Getting There</h4>
+          <%= @destination.directions%>
+       <br></br>
+
+      <h4>Learn More</h4>
+        
+
+          <a target= "_blank" href="<%= @destination.website%>"><%= @destination.website %></a>
+       <br></br>
+>>>>>>> fixy
 
       </div>
   </div>

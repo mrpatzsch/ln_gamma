@@ -1,25 +1,65 @@
-<%= form_for(@destinations) do |f| %>
-  <% if @destinations.errors.any? %>
+<%= form_for(@destination) do |f| %>
+  <% if @destination.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@destinations.errors.count, "error") %> prohibited this destination from being saved:</h2>
+      <h2><%= pluralize(@destination.errors.count, "error") %> prohibited this destination from being saved:</h2>
 
       <ul>
-      <% @destinations.errors.full_messages.each do |message| %>
+      <% @destination.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+<div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :instructions %><br>
-    <%= f.text_field :instructions %>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
   </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :certification %><br>
+    <%= f.text_field :certification %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :desc_prod %><br>
+    <%= f.text_field :desc_prod %>
+  </div>
+  <div class="field">
+    <%= f.label :desc_good %><br>
+    <%= f.text_field :desc_good %>
+  </div>
+    <div class="field">
+    <%= f.label :directions %><br>
+    <%= f.text_field :directions %>
+  </div>
+    <div class="field">
+    <%= f.label :recommended %><br>
+    <%= f.text_field :recommended %>
+  </div>
+      <div class="field">
+    <%= f.label :seo_tags %><br>
+    <%= f.text_field :seo_tags %>
+  </div>
+
+      <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %><br>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<%= link_to 'Show', @destinations %> |
+<%= link_to 'Back', destinations_path %>
