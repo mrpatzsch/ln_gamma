@@ -4,7 +4,7 @@
 
   <div class="container">
   <div itemscope itemtype="http://schema.org/Restaurant">
-      <h2 class="page-title" span itemprop="name"> <%= @destinations.name%> </span></h2>  
+      <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2>  
   </div>
 
   <div class="container">
@@ -93,33 +93,33 @@
       <div class="post-inner">
   
           <ul class="post-meta">
-            <li><i class="fa fa-map-marker"></i><a href="#"><%= @destinations.location%></a>
+            <li><i class="fa fa-map-marker"></i><a href="#"><%= @destination.location%></a>
             </li>
             <li><i class="fa fa-tags"></i><a href="#">Coffee</a>, <a href="#">Coop</a>
             </li>
             <li><i class="fa fa-user"></i><a href="#">LOTUS Nomads</a>
             </li>
-            <li><i class="fa fa-calendar"></i><a href="#"><%= @destinations.created_at %></a>
+            <li><i class="fa fa-calendar"></i><a href="#"><%= @destination.created_at %></a>
             </li>
           </ul>
 
             
       <h3>The Goods</h3>
-          <%= @destinations.desc_prod %>
+          <%= @destination.desc_prod %>
 
       <h3>The Good</h3>
-          <%= @destinations.desc_good %>
+          <%= @destination.desc_good %>
 
       <h3>Don't Miss</h3>
-          <%= @destinations.recommended%>
+          <%= @destination.recommended%>
 
     <div class="gap"></div>
 
       <h4>Getting There</h4>
-          <%= @destinations.directions%>
+          <%= @destination.directions%>
 
       <h4>Learn More</h4>
-          <%= @destinations.website%>
+          <%= @destination.website%>
 
       </div>
   </div>
