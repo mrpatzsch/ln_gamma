@@ -11,8 +11,8 @@ class BucketlistItemsController < ApplicationController
   end
 
   def destroy
-    bucketlistitem = current_user.bucketlist_items.find_by(destination_id: params[:destination_id])
-    bucketlistitem.destroy
+    bucketlistitem = current_user.bucketlist_items.find_by(destination_id: params[:id])
+    bucketlistitem.delete
 
     redirect_to :back
   end
