@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'typhoeus'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -21,6 +22,8 @@ gem 'less-rails-fontawesome'
 
 # image storing & rendering, works with image magick
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -44,7 +47,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
 # Pundit for authorization
-gem 'pundit'
+# gem 'pundit'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
