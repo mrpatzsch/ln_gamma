@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-certified_hotels = Certified_hotels.create([
+certified_hotels = CertifiedHotel.create([
     { name: 'Hilton Vancouver Conference Center & Hotel - Vancouver, WA',
     hotel_id: '227029',
     certification: 'LEED'},

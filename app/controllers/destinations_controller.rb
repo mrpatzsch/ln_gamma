@@ -8,4 +8,8 @@ class DestinationsController < ApplicationController
 		@destination = Destination.find(params[:id])
 	end
 
+	def edit
+		@destination = Destination.find(params[:id])
+	end
+
 end
