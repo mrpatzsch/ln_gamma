@@ -16,7 +16,7 @@ class Hotel < ActiveRecord::Base
 
   def self.show_hotel(hotelId)
     response = Typhoeus.get("http://api.ean.com/ean-services/rs/hotel/v3/info?cid=55505&minorRev=99&apiKey=" + ENV["EAN_key"] + "&locale=en_US&currencyCode=USD&_type=JSON&hotelId=#{hotelId}")
-    
+
     hotel_data = JSON.parse(response.body)
 
     hotel_data

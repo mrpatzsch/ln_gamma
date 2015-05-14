@@ -28,13 +28,16 @@
 // autocomplete = event handler passed as object 
 // source: 
 //
+$('#search_form').submit(function(event) {
+	var destination = $('#destination').val();
 
-$('#submit_button').click(function(event) {
-	var city = $('#city').val();
-
-	if (city === "") {
+	if (destination === "Irvine") {
 		event.preventDefault();
 		$('#error').html("Something went wrong");
+	}
+	else {
+		$( "#error" ).text( "Not valid!" ).show().fadeOut( 1000 );
+  event.preventDefault();
 	}
 });
 
