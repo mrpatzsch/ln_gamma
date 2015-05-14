@@ -4,7 +4,8 @@
 
   <div class="container">
   <div itemscope itemtype="http://schema.org/Restaurant">
-      <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2>  
+    <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2> 
+
   </div>
 
   <div class="container">
@@ -106,6 +107,22 @@
             
       <h3>The Goods</h3>
           <%= @destination.desc_prod %>
+<<<<<<< HEAD
+
+      <h3>The Good</h3>
+          <%= @destination.desc_good %>
+
+      <h3>Don't Miss</h3>
+          <%= @destination.recommended%>
+
+    <div class="gap"></div>
+
+      <h4>Getting There</h4>
+          <%= @destination.directions%>
+
+      <h4>Learn More</h4>
+          <%= @destination.website%>
+=======
       <br></br>
 
       <h3>The Good</h3>
@@ -123,6 +140,7 @@
       <h4>Learn More</h4>
           <a target= "_blank" href="<%= @destination.website%>"><%= @destination.website %></a>
        <br></br>
+>>>>>>> fixy
 
       </div>
   </div>

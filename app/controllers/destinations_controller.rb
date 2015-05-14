@@ -1,8 +1,9 @@
 class DestinationsController < ApplicationController
 
 	def index
+    @destinations = Destination.all
 	end
-	
+
 	def show
 		@destination = Destination.find(params[:id])
 	end
@@ -43,6 +44,5 @@ private
   def destination_params
       params.require(:destination).permit(:name, :location, :website, :certification, :category, :desc_prod, :desc_good, :directions, :recommended, :seo_tags, :image )
     end
-
 
 end

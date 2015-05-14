@@ -2,23 +2,46 @@
 <%= render './site/nav' %>
 
   <div class="container">
-            <h2 class="page-title">Recommended Destinations</h2>
+    <h2 class="page-title">Recommended Destinations</h2>
 	</div>
   <div class="container">
-      <div id="popup-gallery">
-          <div class="row row-col-gap">
-              <div class="col-md-4">
-                  <a class="hover-img popup-gallery-image" href="destinations/1">
-                      <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" /><i class="fa fa-heart round box-icon-small hover-icon i round"></i>
-                  </a>
-              </div>
-          </div>
+    <div id="popup-gallery">
+      <div class="row row-col-gap">
+        <div class="col-md-4">
+          <ul>
+            <!-- Loop through destinations -->
+            <% @destinations.each do |d| %>
+              <li>
+               <!-- Show destination info -->
+                <%= d.name %><br>
+                <%= d.location %><br>
+                <%= d.category %><br>
+                <a class="hover-img popup-gallery-image" href="destinations/1">
+                  <img src="http://i.imgur.com/f94ztuG.jpg" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
+                  <i class="fa fa-heart round box-icon-small hover-icon i round">
+                  </i>
+                </a>
+                <!-- Setup form for creating new bucketlist items -->
+                <% if current_user.has_bucket_list_item?(d.id) %>
+                  <%= link_to "Remove from Bucket List", { :controller => "bucketlist_items",
+                                  :action => "destroy",
+                                  :id => d.id },
+                                  :method => :delete %>
+                <% else %>
+                  <%= form_for BucketlistItem.new do |f| %>
+                    <!-- Enter destination id -->
+                    <%= f.hidden_field :destination_id, value: d.id %>
+                    <%= f.submit "Add to Bucket List" %>
+                  <% end %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
+    </div>
   </div>
 
-   								
-
-        <div class="gap"></div>
-
+  <div class="gap"></div>
 
 <%= render './site/footer' %>

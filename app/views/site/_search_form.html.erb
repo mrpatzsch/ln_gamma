@@ -1,0 +1,25 @@
+<div class="form">
+  <div id="error"></div>
+    <%= form_tag :hotels, :method => 'post', action: '/hotels' do %>
+        <div class="col-md-3">
+          <label for="#city">City:</label>
+          <%= text_field_tag(:city) %>
+      </div>
+        <div class="col-md-1">
+          <label for="#state">State:</label>
+          <%= text_field_tag(:state) %>
+        </div>
+        <div class="col-md-1">
+          <label for="#country">Country:</label>
+          <%= text_field_tag(:country) %>
+        </div>
+        <div class="col-md-3">
+          <%= label_tag(:arrive, "Arrive:") %>
+          <%= date_field_tag(:arrive) %>
+        </div>
+        <div class="col-md-3">
+          <%= label_tag(:depart, "Depart:") %>
+          <%= date_field_tag(:depart) %>
+          <%= submit_tag "Search", :id => "submit_button" %>
+        </div>
+      <% end %>

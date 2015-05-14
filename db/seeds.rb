@@ -86,7 +86,8 @@ certified_hotels = CertifiedHotel.create([
     hotel_id: '308154',
     certification: 'EarthCheck'},
 
-    ])
+
+])
 
 destinations = Destination.create([
  { name: 'The Victorian',
