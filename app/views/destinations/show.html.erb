@@ -106,20 +106,25 @@
             
       <h3>The Goods</h3>
           <%= @destination.desc_prod %>
+      <br></br>
 
       <h3>The Good</h3>
           <%= @destination.desc_good %>
+       <br></br>
 
       <h3>Don't Miss</h3>
           <%= @destination.recommended%>
-
-    <div class="gap"></div>
+       <br></br>
 
       <h4>Getting There</h4>
           <%= @destination.directions%>
+       <br></br>
 
       <h4>Learn More</h4>
-          <%= @destination.website%>
+        
+
+          <a target= "_blank" href="<%= @destination.website%>"><%= @destination.website %></a>
+       <br></br>
 
       </div>
   </div>
