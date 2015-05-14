@@ -12,8 +12,8 @@
           <!-- Loop through destinations -->
           <% @destinations.each do |d| %>
             <li>
-              <a class="hover-img popup-gallery-image" href="destinations/1">
-                <img src="<%= d.image %>" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
+              <a class="hover-img popup-gallery-image" href="/destinations/<%= d.id %>">
+                <img src="<%= d.image_url %>" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
                 <i class="fa fa-heart round box-icon-small hover-icon i round">
                 </i>
               </a>
