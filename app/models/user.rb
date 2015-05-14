@@ -5,5 +5,10 @@ class User < ActiveRecord::Base
   has_many :hotels
   has_many :establishments
   has_many :certified_hotels
-  has_many :bucketlists
+  has_many :bucketlist_items
+
+  def has_bucket_list_item?(destination_id)
+    self.bucketlist_items.find_by(destination_id: destination_id)
+  end
+
 end
