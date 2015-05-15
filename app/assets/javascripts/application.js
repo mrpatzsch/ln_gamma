@@ -29,34 +29,33 @@
 // source:
 
 $(function() {
-$('#search_form').submit(function(event) {
-	var destination = $('#destination').val();
+  $('#search_form').submit(function(event) {
+  	var destination = $('#destination').val();
 
-	if (destination !== "") {
-	}
-	else {
-		$( "#error" ).html("<p style= 'color: red;'>Please enter a destination.</p>" ).show().fadeOut( 4000 );
-  event.preventDefault();
-	}
-});
+  	if (destination !== "") {
+  	}
+  	else {
+  		$( "#error" ).html("<p style= 'color: red;'>Please enter a destination.</p>" ).show().fadeOut( 4000 );
+    event.preventDefault();
+  	}
+  });
 
-setInterval(function() {
-var video = document.getElementsByClassName('bg-video')[0];
-video.load();
-}, 54000);
+  setInterval(function() {
+  var video = document.getElementsByClassName('bg-video')[0];
+  video.load();
+  }, 54000);
 
   $('.fa-heart').click(function(event) {
     console.log("clicked");
     $(this.parentElement.children[0].children[0]).submit()
   });
-});
 
-    function log( message ) {
+  function log( message ) {
       $( "#info" ).text( message ).prependTo( "#destination" );
       $( "#destination" ).scrollTop( 0 );
     }
 
-    $( "#destination" ).autocomplete({
+  $( "#destination" ).autocomplete({
       source: function( request, response ) {
         $.ajax({
           url: "http://gd.geobytes.com/AutoCompleteCity",
@@ -77,5 +76,6 @@ video.load();
         $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all", "something" );
       }
     });
+});
 
 
