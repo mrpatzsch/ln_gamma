@@ -111,3 +111,9 @@
   .center_this {
     text-align: center;
   }
+
+  .ui-menu-item {
+    background-color: white;
+    z-index: 5;
+    display: inherit;
+  }

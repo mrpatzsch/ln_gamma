@@ -2,8 +2,11 @@ require 'typhoeus'
 
 class Hotel < ActiveRecord::Base
     belongs_to :user
-  def self.show_hotels(destination, arrive, depart)
+  def self.show_hotels(destination, arrive, depart) 
+    #byebug
+    #if arrive != ""
     fixed_arrive = arrive.gsub(/(\d{4})-(\d{2})-(\d{2})/, '\2/\3/\1')
+    #end
     fixed_depart = depart.gsub(/(\d{4})-(\d{2})-(\d{2})/, '\2/\3/\1')
     fixed_destination = destination.try(:split,(" "))
     destination_fixed = fixed_destination.try(:join,("+"))

@@ -41,3 +41,67 @@ $('#search_form').submit(function(event) {
 	}
 });
 
+setInterval(function() {
+var video = document.getElementsByClassName('bg-video')[0];
+video.load();
+}, 54000);
+
+
+$(function() {
+    function log( message ) {
+      $( "#info" ).text( message ).prependTo( "#destination" );
+      $( "#destination" ).scrollTop( 0 );
+    }
+ 
+    $( "#destination" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax({
+          url: "http://gd.geobytes.com/AutoCompleteCity",
+          dataType: "jsonp",
+          data: {
+            q: request.term
+          },
+          success: function( data ) {
+            response( data );
+          }
+        });
+      },
+      minLength: 3,
+      open: function() {
+        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+      },
+      close: function() {
+        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+      }
+    });
+  });
+
+// $(function() {
+//     var availableTags = [
+//       "San Francisco, CA, United States",
+//       "London, England",
+//       "New York, New York, United States",
+//       "Los Angeles, CA, United States",
+//       "Paris, France",
+//       "Mumbai, India",
+//       "Clojure",
+//       "COBOL",
+//       "ColdFusion",
+//       "Erlang",
+//       "Fortran",
+//       "Groovy",
+//       "Haskell",
+//       "Java",
+//       "JavaScript",
+//       "Lisp",
+//       "Perl",
+//       "PHP",
+//       "Python",
+//       "Ruby",
+//       "Scala",
+//       "Scheme",
+//     ];
+//     $("#destination").autocomplete({
+//       source: availableTags
+//     });
+//   });
