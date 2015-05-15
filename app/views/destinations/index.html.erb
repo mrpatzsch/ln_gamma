@@ -2,8 +2,9 @@
 <%= render './site/nav' %>
 
 <div class="container">
-  <h2 class="page-title">Recommended Destinations</h2>
+  <h1 class="page-title">Destinations</h1>
 </div>
+
 <div class="container">
   <div id="popup-gallery">
     <div class="row row-col-gap">
@@ -14,8 +15,6 @@
             <li>
               <a class="hover-img popup-gallery-image" href="/destinations/<%= d.id %>">
                 <img src="<%= d.image_url %>" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
-                <i class="fa fa-heart round box-icon-small hover-icon i round">
-                </i>
               </a>
               <!-- Show destination info -->
               <%= d.name %><br>
@@ -29,11 +28,17 @@
                                 :id => d.id },
                                 :method => :delete %>
               <% else %>
-                <%= form_for BucketlistItem.new do |f| %>
-                  <!-- Enter destination id -->
-                  <%= f.hidden_field :destination_id, value: d.id %>
-                  <%= f.submit "Add to Bucket List" %>
-                <% end %>
+                <div>
+                  <div style="display:none;">
+                    <%= form_for BucketlistItem.new do |f| %>
+                      <!-- Enter destination id -->
+                      <%= f.hidden_field :destination_id, value: d.id %>
+                      <%= f.submit "Add to Bucket List" %>
+                    <% end %>
+                  </div>
+                  <i class="fa fa-heart round box-icon-small hover-icon i round">
+                  </i>
+                </div>
               <% end %>
               <% end %>
               <br>
@@ -45,6 +50,8 @@
     </div>
   </div>
 </div>
+
+
 
 <div class="gap"></div>
 

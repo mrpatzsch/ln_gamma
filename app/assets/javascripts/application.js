@@ -28,13 +28,18 @@
 // autocomplete = event handler passed as object 
 // source: 
 //
+$(function(){
+  $('#submit_button').click(function(event) {
+  	var city = $('#city').val();
 
-$('#submit_button').click(function(event) {
-	var city = $('#city').val();
+  	if (city === "") {
+  		event.preventDefault();
+  		$('#error').html("Something went wrong");
+  	}
+  });
 
-	if (city === "") {
-		event.preventDefault();
-		$('#error').html("Something went wrong");
-	}
+  $('.fa-heart').click(function(event) {
+    console.log("clicked"); 
+    $(this.parentElement.children[0].children[0]).submit()
+  });
 });
-
