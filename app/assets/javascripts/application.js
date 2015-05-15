@@ -28,15 +28,15 @@
 // autocomplete = event handler passed as object 
 // source: 
 //
+
+$(function() {
 $('#search_form').submit(function(event) {
 	var destination = $('#destination').val();
 
-	if (destination === "Irvine") {
-		event.preventDefault();
-		$('#error').html("Something went wrong");
+	if (destination !== "") {
 	}
 	else {
-		$( "#error" ).text( "Not valid!" ).show().fadeOut( 1000 );
+		$( "#error" ).html("<p style= 'color: red;'>Please enter a destination.</p>" ).show().fadeOut( 4000 );
   event.preventDefault();
 	}
 });
@@ -47,7 +47,6 @@ video.load();
 }, 54000);
 
 
-$(function() {
     function log( message ) {
       $( "#info" ).text( message ).prependTo( "#destination" );
       $( "#destination" ).scrollTop( 0 );
@@ -68,40 +67,12 @@ $(function() {
       },
       minLength: 3,
       open: function() {
-        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top", "something" );
       },
       close: function() {
-        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all", "something" );
       }
     });
   });
 
-// $(function() {
-//     var availableTags = [
-//       "San Francisco, CA, United States",
-//       "London, England",
-//       "New York, New York, United States",
-//       "Los Angeles, CA, United States",
-//       "Paris, France",
-//       "Mumbai, India",
-//       "Clojure",
-//       "COBOL",
-//       "ColdFusion",
-//       "Erlang",
-//       "Fortran",
-//       "Groovy",
-//       "Haskell",
-//       "Java",
-//       "JavaScript",
-//       "Lisp",
-//       "Perl",
-//       "PHP",
-//       "Python",
-//       "Ruby",
-//       "Scala",
-//       "Scheme",
-//     ];
-//     $("#destination").autocomplete({
-//       source: availableTags
-//     });
-//   });
+
