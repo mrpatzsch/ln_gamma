@@ -4,7 +4,8 @@
 
 <div class="container">
   <div itemscope itemtype="http://schema.org/Restaurant">
-    <h2 class="page-title" span itemprop="name"> <%= @destination.name%> </span></h2>
+    <h2 class="page-title" span itemprop="name" style="display: inline;"> <%= @destination.name%> </span>
+    </h2>
   </div>
 
   <div class="container">
@@ -14,6 +15,7 @@
           <div class="sidebar-widget">
             <div class="Form">
               <input class="form-control" placeholder="Search..." type="text" />
+              
             </div>
           </div>
        <!--    <div class="sidebar-widget">
@@ -97,6 +99,7 @@
           </header>
           <div class="post-inner">
             <ul class="post-meta">
+              
               <li>
                 <i class="fa fa-map-marker"></i><a href="#"><%= @destination.location %></a>
               </li>
@@ -109,9 +112,33 @@
               <li>
                 <i class="fa fa-calendar"></i><a href="#"><%= @destination.created_at %></a>
               </li>
+              <li>
+                <!-- Setup form for creating new bucketlist items -->
+              <% if current_user %>
+              <% if current_user.has_bucket_list_item?(@destination.id) %>
+                <%= link_to "Remove from Bucket List", { :controller => "bucketlist_items",
+                                :action => "destroy",
+                                :id => @destination.id },
+                                :method => :delete %>
+              <% else %>
+                <div>
+                  <div style="display:none;">
+                    <%= form_for BucketlistItem.new do |f| %>
+                      <!-- Enter destination id -->
+                      <%= f.hidden_field :destination_id, value: @destination.id %>
+                      <%= f.submit "Add to Bucket List" %>
+                    <% end %>
+                  </div>
+                  <i class="fa fa-heart round box-icon-small hover-icon i round">
+                  </i>
+                </div>
+              <% end %>
+              <% end %>
+              </li>
             </ul>
 
             <h3>The Goods</h3>
+            
             <%= @destination.desc_prod %>
             <br>
             <br>
