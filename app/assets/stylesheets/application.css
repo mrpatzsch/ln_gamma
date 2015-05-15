@@ -26,7 +26,12 @@
 
    font-family:"Candara", "TradeGothic", "Trebuchet MS", Helvetica, sans-serif;
   */
-
+  .tab-content {
+    opacity: .5;
+  }
+  .tab-content:hover {
+    opacity: 1;
+  }
   .hotel_thumb {
     height: 100px;
     width: 100px;
@@ -95,4 +100,20 @@
 
   #submit_button {
     margin-left: 20px;
+  }
+
+  .forms {
+    height: 40px;
+    width: 150px;
+    border: 1px shadow grey;
+  }
+
+  .center_this {
+    text-align: center;
+  }
+
+  .ui-menu-item {
+    background-color: white;
+    z-index: 5;
+    display: inherit;
   }
