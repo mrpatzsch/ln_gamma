@@ -92,7 +92,7 @@ certified_hotels = CertifiedHotel.create([
 destinations = Destination.create([
  { name: 'The Victorian',
     location: 'Plainfield, CT',
-    website: 'http://i.imgur.com/jycojI8.jpg',
+    website: 'http://www.seabirdenterprises.net/communitylocations/thevictorian.html',
     certification: 'Hires Inclusively, Staff Development',
     category: 'Restaurant: Breakfast & Lunch',
     desc_prod: 'The Victorian, located in the Northeastern quadrant of Connecticut, serves traditional New England breakfast and lunch Monday through Friday. All menu items including the breads, pies and other assorted sweets goods are baked up daily on-site. Guests are welcome to enjoy their meals and wander around the property which boasts a greenhouse bearing both flowers and vegetables. All of the baked goods can also be bought out of the bakery case or wholesale to be sold at farm stands throughout the area. The Victorian’s fruit pies are renowned in the region for their classic excellence with all fruit sourced locally.',
@@ -100,7 +100,8 @@ destinations = Destination.create([
 Trainees learn all aspects of working in a restaurant from wait staff skills to baking and food preparation. Much of the training replicates the processes of the local chain restaurants, which typically hire trainees upon completion of their time with Seabird. These skills can be used as a step toward independent employment, while others make a career of the program. Trainees in the restaurant are paid through the program. Wages are based on average productivity and hours worked. These wages typically are offset by entitlements individuals receive from the Social Security Administration. Staff pay and benefits are among the best within the industry.',
     directions: 'Located off of Route 12 in Plainfield, CT. (860) 564-2505',
     recommended: 'Made fresh-daily fruit pies!', 
-    seo_tags: 'Connecticut, Locally Made, Baked Goods, Job Training'},
+    seo_tags: 'Connecticut, Locally Made, Baked Goods, Job Training',
+    image_url: 'http://i.imgur.com/OcK3Wqu.png'},
 
   { name: 'Akha Ama',
     location: 'Chiang Mai, Thailand',
@@ -114,7 +115,8 @@ Coffee is the second most widely traded commodity globally. But the beans have a
 Once the village growers followed Lee’s advice and invested in learning how to process their own beans, they could afford to wait for a better bid. The results? Higher quality coffee for the end consumer and a higher quality life for the growers.',
     directions: 'Akha Ama Coffee 9/1 Mata Apartment, Soi 3, Hussadhisewee Road, Chiang Mai. Tel.: 66-86-915-8600',
     recommended: 'The Shakerato',
-    seo_tags: 'Coffee, Coop, Locally Sourced'},
+    seo_tags: 'Coffee, Coop, Locally Sourced',
+    image_url: 'http://i.imgur.com/Og6Gqms.png'},
 
   { name: 'Snowday',
     location: 'New York, New York',
@@ -126,7 +128,8 @@ Once the village growers followed Lee’s advice and invested in learning how to
 Drive Change works with individuals aged 16-25 all of whom have had direct impact with the adult criminal justice system. Drive Change aims to bring the recidivism rate down to 20% and so far all the employees on a bright path. The 8-person crew members are paid weekly at almost 40% over minimum wage in New York. They also receive continuing education and training on money management, culinary arts, hospitality, business development, entrepreneurship training, social media, food sustainability and criminal justice advocacy. The program is transitional; it is 6-8 months long and rotates three times a year allowing each truck to train up to 30 young people per year.',
     directions: 'Snowday comes to you! Follow @drivechangenyc and @snowdaytruck on Twitter ',
     recommended: 'The Famous Maple Grilled Cheese',
-    seo_tags: 'Connecticut, Locally Made, Baked Goods, Job Training'}
+    seo_tags: 'Connecticut, Locally Made, Baked Goods, Job Training',
+    image_url: 'http://i.imgur.com/oSW501v.png'},
 
     ])
 

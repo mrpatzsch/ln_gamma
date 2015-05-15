@@ -41,6 +41,10 @@ class SiteController < ApplicationController
     @hotel = hotel["HotelInformationResponse"]
   end
 
+  def index
+    @destinations = Destination.all.first(3)
+  end
+
   def destinations
   end
 

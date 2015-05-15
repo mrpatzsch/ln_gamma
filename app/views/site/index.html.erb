@@ -7,9 +7,9 @@
 <div class="top-area show-onload">
   <div class="bg-holder full">
     <div class="bg-mask"></div>
-    <video class="bg-video hidden-sm hidden-xs" preload="auto" autoplay="true" loop="loop" muted="muted"  
-    <%= video_tag("Nomads_index.mp4") %> 
- 
+    <video class="bg-video hidden-sm hidden-xs" preload="auto" autoplay="true" loop="loop" muted="muted"
+    <%= video_tag("Nomads_index.mp4") %> >
+
     </video>
     <div class="bg-content">
       <div class="container">
@@ -34,6 +34,15 @@
                 <%= render 'search_form' %>
               </div>
             </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-2">
+              </div>
+
+              <div class="tab-pane fade" id="tab-5">
+
+              <h2>Search</h2>
+
               </div>
             </div>
           </div>
@@ -78,11 +87,11 @@
             </header>
             <div class="thumb-caption">
               <h5 class="thumb-title"><a class="text-darken" href="#">Best Discoveries</a></h5>
-              <p class="thumb-desc">We scour the globe near and far to bring you the most exciting spots for your bucketlist.</p>
+              <p class="thumb-desc">We scout the globe near and far to bring you the most exciting spots for your bucketlist.</p>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   </div>
   <div class="gap gap-small"></div>
@@ -104,16 +113,25 @@
       <div class="gap"></div>
       <h2 class="text-center">Life is a Journey, not a Destination</h2>
       <div class="gap">
-        <div class="row row-wrap">
-          <div class="col-md-12">
+
             <div class="thumb">
-              <h5 class="center_this">Need to have this display destinations in an array, the recent most 4 with picture, name and location.</h5>
-            </div>
-          </div>
+              <!-- Loop through destinations -->
+              <% @destinations.each do |d| %>
+              <div class="row">
+                <div class="col-md-3">
+                  <a class="hover-img popup-gallery-image" href="/destinations/<%= d.id %>">
+                    <img src="<%= d.image_url %>" alt="Sri Lanka Rice Paddies" title="Responsible Bike Tour Sri Lanka" />
+                  </a>
+                  <!-- Show destination info -->
+                  <%= d.name %><br>
+                  <%= d.location %><br>
+                  <%= d.category %><br>
+                  <br>
+                  <br>
+                </div>
+              <% end %>
         </div>
       </div>
     </div>
 
     <%= render 'footer' %>
-
-
