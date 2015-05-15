@@ -23,36 +23,19 @@
 //}
 
 //$(default).html("something went wrong")
-// send an error message 
+// send an error message
 
-// autocomplete = event handler passed as object 
-// source: 
-//
-$(function(){
-  $('#submit_button').click(function(event) {
-  	var city = $('#city').val();
+// autocomplete = event handler passed as object
+// source:
 
-  	if (city === "") {
-  		event.preventDefault();
-  		$('#error').html("Something went wrong");
-  	}
-  });
-
-  $('.fa-heart').click(function(event) {
-    console.log("clicked"); 
-    $(this.parentElement.children[0].children[0]).submit()
-  });
-});
-
+$(function() {
 $('#search_form').submit(function(event) {
 	var destination = $('#destination').val();
 
-	if (destination === "Irvine") {
-		event.preventDefault();
-		$('#error').html("Something went wrong");
+	if (destination !== "") {
 	}
 	else {
-		$( "#error" ).text( "Not valid!" ).show().fadeOut( 1000 );
+		$( "#error" ).html("<p style= 'color: red;'>Please enter a destination.</p>" ).show().fadeOut( 4000 );
   event.preventDefault();
 	}
 });
@@ -62,13 +45,17 @@ var video = document.getElementsByClassName('bg-video')[0];
 video.load();
 }, 54000);
 
-
+  $('.fa-heart').click(function(event) {
+    console.log("clicked");
+    $(this.parentElement.children[0].children[0]).submit()
+  });
+});
 
     function log( message ) {
       $( "#info" ).text( message ).prependTo( "#destination" );
       $( "#destination" ).scrollTop( 0 );
     }
- 
+
     $( "#destination" ).autocomplete({
       source: function( request, response ) {
         $.ajax({
@@ -84,39 +71,11 @@ video.load();
       },
       minLength: 3,
       open: function() {
-        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+        $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top", "something" );
       },
       close: function() {
-        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+        $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all", "something" );
       }
     });
 
-// $(function() {
-//     var availableTags = [
-//       "San Francisco, CA, United States",
-//       "London, England",
-//       "New York, New York, United States",
-//       "Los Angeles, CA, United States",
-//       "Paris, France",
-//       "Mumbai, India",
-//       "Clojure",
-//       "COBOL",
-//       "ColdFusion",
-//       "Erlang",
-//       "Fortran",
-//       "Groovy",
-//       "Haskell",
-//       "Java",
-//       "JavaScript",
-//       "Lisp",
-//       "Perl",
-//       "PHP",
-//       "Python",
-//       "Ruby",
-//       "Scala",
-//       "Scheme",
-//     ];
-//     $("#destination").autocomplete({
-//       source: availableTags
-//     });
-//   });
+

@@ -96,6 +96,7 @@
  #destination {
    height: 40px;
    width: 400px;
+   background-color: white;
  }
 
   #submit_button {
@@ -112,8 +113,18 @@
     text-align: center;
   }
 
-  .ui-menu-item {
+  .ui-autocomplete {
     background-color: white;
-    z-index: 5;
-    display: inherit;
+    z-index: 20;
+    width: 400px;
+  }
+
+  .ui-autocomplete li {
+    list-style-type: none;
+  }
+
+  .ui-autocomplete li:hover {
+    background-color: #1b94d2;
+    color: black;
+    
   }
