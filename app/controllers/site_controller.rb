@@ -46,7 +46,6 @@ class SiteController < ApplicationController
     ids = []
      @certified_hotels.each do |certify|
     puts certify_h.hotel_id.to_i + ","
-       end
     end
     puts ids
     hotel_id = ids
