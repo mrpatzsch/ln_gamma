@@ -5,9 +5,10 @@ class SiteController < ApplicationController
     destination = params[:destination] || ""
     arrive = params[:arrive] || ""
     depart = params[:depart] || ""
+    sort = params[:sort] || "DEFAULT"
 #byebug
     unless destination == "" 
-        hotels = Hotel.show_hotels(destination, arrive, depart)
+        hotels = Hotel.show_hotels(destination, arrive, depart, sort)
         @hotels = hotels["HotelListResponse"]["HotelList"]["HotelSummary"]
 
       hotelids = []
@@ -39,6 +40,18 @@ class SiteController < ApplicationController
     hotelId = params[:hotelId]
     hotel = Hotel.show_hotel(hotelId)
     @hotel = hotel["HotelInformationResponse"]
+  end
+  def responsible_search
+    @certified_hotels = CertifiedHotel.all
+    ids = []
+     @certified_hotels.each do |certify|
+    puts certify_h.hotel_id.to_i + ","
+       end
+    end
+    puts ids
+    hotel_id = ids
+    responsible = Hotel.responsible(hotel_id)
+    @responsible_hotels = responsible["HotelListResponse"]["HotelList"]["HotelSummary"]
   end
 
   def index

@@ -33,6 +33,7 @@
 
  resources :destinations
 
+    get '/responsible', to: 'site#responsible_search'
 
 
 
