@@ -3,14 +3,13 @@
 
 
 <div class="container hotels_page">
-  <h2 class="page-title">Search for Hotel</h2>
+  <h2 class="page-title">Search for Hotels</h2>
   <%= render 'search_form' %> 
 </div>
 <% if @hotels %>
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-9">
-                <button id='price'>Price</button>
 
 <% @hotels.each do |hotel| %>  
   <div class="gap gap-small"></div>
@@ -32,7 +31,7 @@
           </a>
         </li>
       </ul>
-<% end %>
+    <% end %>
 <% end %>
   </div>
 </div>
@@ -272,7 +271,7 @@
                     </div>
                 </div>
             </div>
-              </div>
+        </div>
 </div>
 
 <!-- BREADCRUMBS -->

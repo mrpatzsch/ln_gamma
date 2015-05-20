@@ -1,3 +1,39 @@
-<% @responsible_hotels.each do |hotel| %>
-  <%= hotel["name"] %>
+<%= render 'head' %>
+<%= render 'nav' %>
+
+<div class="container hotels_page">
+  <h2 class="page-title">Search for Hotels</h2>
+  <%= render 'search_form' %> 
+</div>
+<% if @responsible_hotels %>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-9">
+
+<% @responsible_hotels["HotelListResponse"]["HotelList"]["HotelSummary"].each do |body| %>
+  
+  <div class="gap gap-small"></div>
+    <ul class="booking-list">
+      <li><a class="booking-item" href="/hotels/<%= body["hotelId"] %>">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="hotel_img"><img src="http://images.travelnow.com/<%= body["thumbNailUrl"] %>" class="hotel_thumb"></div>
+            </div>
+            <div class="col-md-5">
+              <h3><%= raw CGI.unescapeHTML(body["name"]) %></h3>
+              <h4><%= body["address1"] %>, <%= body["city"] %>, <%= body["stateProvinceCode"] %></h4>
+              <p><%= raw CGI.unescapeHTML(body["locationDescription"]) %></p>
+            </div>
+            <div class="col-md-4"><span>From: </span><span class="booking-item-price"><%= number_to_currency(body["lowRate"], :precision => 0) %></span><span>/night</span><br><br>
+              <span class="btn btn-primary">Book</span>
+            </div>
+          </div>
+          </a>
+        </li>
+      </ul>
 <% end %>
+<% end %>
+  </div>
+</div>
+</div>
+<%= render 'footer' %>

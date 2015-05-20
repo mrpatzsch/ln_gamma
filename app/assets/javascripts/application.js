@@ -29,6 +29,7 @@ $(function() {
       $( "#error" ).html("<p style= 'color: red;'>Please enter a destination.</p>" ).show().fadeOut( 4000 );
       event.preventDefault();
     }
+    
   });
 
 // Resets video on index page 

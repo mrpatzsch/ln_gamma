@@ -29,12 +29,11 @@
 
     get '/bucketlist', to: 'bucketlist_items#index'
 
+    get '/responsible', to: 'site#responsible_search'
+
   resources :bucketlist_items, only: [:create, :destroy, :index]
 
  resources :destinations
-
-    get '/responsible', to: 'site#responsible_search'
-
 
 
 
