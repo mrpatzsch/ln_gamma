@@ -39,7 +39,9 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        <% if @hotel["HotelDetails"]["locationDescription"] %>
         <p><%= @hotel["HotelDetails"]["locationDescription"] %></p>
+      <% end %>
         <div id="book"></div>
         <% @hotel["RoomTypes"]["RoomType"].each do |room| %>
           <div class="gap gap-small"></div>
@@ -51,8 +53,12 @@
                   <img class="hotel_main" src="<%= @hotel["HotelImages"]["HotelImage"][4]["url"] %>" alt="Image Alternative text" title="hotel 2" />
                 </div>
                 <div class="col-md-6">
+                  <% if room["description"] %>
                   <h5 class="booking-item-title"><%= room["description"] %></h5>
+                <% end %>
+                <% if room["descriptionLong"] %>
                   <p class="text-small"><%= raw CGI.unescapeHTML(room["descriptionLong"]) %></p>
+                <% end %>
                 </div>
                 <div class="col-md-3"><span>From: </span><span class="booking-item-price"><%= number_to_currency(@hotel["HotelSummary"]["lowRate"], :precision => 0) %></span><span>/night</span><span class="btn btn-primary">Book</span>
                 </div>

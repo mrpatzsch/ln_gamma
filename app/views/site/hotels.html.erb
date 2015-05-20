@@ -17,14 +17,20 @@
       <li><a class="booking-item" href="/hotels/<%= hotel["hotelId"] %>">
           <div class="row">
             <div class="col-md-3">
+              <% if hotel["thumbNailUrl"] %>
               <div class="hotel_img"><img src="http://images.travelnow.com/<%= hotel["thumbNailUrl"] %>" class="hotel_thumb"></div>
+            <% end %>
             </div>
             <div class="col-md-5">
               <h3><%= raw CGI.unescapeHTML(hotel["name"]) %></h3>
               <h4><%= hotel["address1"] %>, <%= hotel["city"] %>, <%= hotel["stateProvinceCode"] %></h4>
+              <% if hotel["locationDescription"] %>
               <p><%= raw CGI.unescapeHTML(hotel["locationDescription"]) %></p>
+            <% end %>
             </div>
+            <% if hotel["lowRate"]  %>
             <div class="col-md-4"><span>From: </span><span class="booking-item-price"><%= number_to_currency(hotel["lowRate"], :precision => 0) %></span><span>/night</span><br><br>
+            <% end %>
               <span class="btn btn-primary">Book</span>
             </div>
           </div>
@@ -62,8 +68,6 @@
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/248276">The Orchard Garden Hotel</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 466 Bush St, San Francisco, CA</small>
                             </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$389</span><small> avg/night</small>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -90,8 +94,6 @@
                             </ul>
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/105817">Itc The Mughal</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> Taj Ganj Uttar Pradesh, Agra, India</small>
-                            </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$74</span><small> avg/night</small>
                             </p>
                         </div>
                     </div>
@@ -120,8 +122,6 @@
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/325988">Ritz Carlton Charlotte</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 201 East Trade Street, Charlotte, NC</small>
                             </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$599</span><small> avg/night</small>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -148,8 +148,6 @@
                             </ul>
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/265998">Cavallo Point</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 601 Murray Circle, Sausalito, CA</small>
-                            </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$475</span><small> avg/night</small>
                             </p>
                         </div>
                     </div>
@@ -178,8 +176,6 @@
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/327233">Sheraton Incheon Hotel</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 153, Convensia-daero, Yeonsu-gu, Incheon, South Korea</small>
                             </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$181</span><small> avg/night</small>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -206,8 +202,6 @@
                             </ul>
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/325236">JW Marriott San Antonio Hill Country Resort & Spa</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 23808 Resort Pkwy, San Antonio, TX</small>
-                            </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$332</span><small> avg/night</small>
                             </p>
                         </div>
                     </div>
@@ -236,8 +230,6 @@
                             <h5 class="thumb-title"><a class="text-darken" href="/hotels/147594">The Venetian</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 3355 Las Vegas Blvd S, Las Vegas, NV</small>
                             </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$299</span><small> avg/night</small>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -264,8 +256,6 @@
                             </ul>
                             <h5 class="thumb-title"><a class="text-darken" href="#">The Orchard</a></h5>
                             <p class="mb0"><small><i class="fa fa-map-marker"></i> 665 Bush St, San Francisco, CA</small>
-                            </p>
-                            <p class="mb0 text-darken"><span class="text-lg lh1em text-color">$329</span><small> avg/night</small>
                             </p>
                         </div>
                     </div>
