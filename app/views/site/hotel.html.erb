@@ -45,7 +45,7 @@
         <div id="book"></div>
         <% @hotel["RoomTypes"]["RoomType"].each do |room| %>
           <div class="gap gap-small"></div>
-          <ul class="booking-list">
+         <!-- <ul class="booking-list">
             <li>
             <a class="booking-item">
               <div class="row">
@@ -59,20 +59,17 @@
                 <% if room["descriptionLong"] %>
                   <p class="text-small"><%= raw CGI.unescapeHTML(room["descriptionLong"]) %></p>
                 <% end %>
-                </div>
-                <div class="col-md-3"><span>From: </span><span class="booking-item-price"><%= number_to_currency(@hotel["HotelSummary"]["lowRate"], :precision => 0) %></span><span>/night</span><span class="btn btn-primary">Book</span>
-                </div>
-              </div>
+                <div class="col-md-3"><span>From: </span><span class="booking-item-price"><%= number_to_currency(@hotel["HotelSummary"]["lowRate"], :precision => 0) %></span><span>/night</span><span class="btn btn-primary">Book</span> -->
             </a>
           <% end %>
           </li>
         </ul>
         <p>
-        <%= raw CGI.unescapeHTML(@hotel["HotelDetails"]["hotelPolicy"]) %>
-        </p>
+       <!--  <%= raw CGI.unescapeHTML(@hotel["HotelDetails"]["hotelPolicy"]) %>
+       </p>-->
       </div>
       <div class="col-md-3 description">
-        <a href="#book"><button class="btn btn-block btn-lg book_button">Book</button></a>
+        <!--<a href="#book"><button class="btn btn-block btn-lg book_button">Book</button></a> -->
         <p>Hotel Rating: <img src="<%= @hotel["HotelSummary"]["tripAdvisorRatingUrl"] %>" class="tripadvisor_img"></p>
         <p><%=  raw CGI.unescapeHTML(@hotel["HotelDetails"]["propertyDescription"]) %></p>
       </div>

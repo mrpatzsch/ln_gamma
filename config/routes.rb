@@ -9,7 +9,7 @@
 
     get '/about', to: 'site#about'
 
-    get '/hotels', to: 'site#hotels'
+   # get '/hotels', to: 'site#hotels'
 
     get '/destinations', to: 'destinations#index'
 
@@ -29,7 +29,7 @@
 
     get '/bucketlist', to: 'bucketlist_items#index'
 
-    get '/responsible', to: 'site#responsible_search'
+    get '/hotels', to: 'site#responsible_search'
 
   resources :bucketlist_items, only: [:create, :destroy, :index]
 
